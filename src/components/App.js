@@ -5,24 +5,26 @@ import Footer from "./Footer";
 import Pages from "./Pages";
 
 function App() {
-  const [currentPage, setCurrentPage] = useState(1);
+  const getCurrentPage = Number(localStorage.getItem("currentPage"));
+  const [currentPage, setCurrentPage] = useState(getCurrentPage || 1);
 
   const HandleGoToNextPage = () => {
-    console.log("handle go to next page: ", currentPage);
     const nextPage = currentPage + 1;
+    localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
   };
 
   const HandleGoToPreviousPage = () => {
-    console.log("handle go to previous page: ", currentPage);
     let nextPage = currentPage - 1;
     if (nextPage <= 0) {
       nextPage = 1;
     }
+    localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
   };
 
   const HandleGoToFirstPage = () => {
+    localStorage.setItem("currentPage", 1);
     setCurrentPage(1);
   };
 

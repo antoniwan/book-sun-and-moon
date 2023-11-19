@@ -44,6 +44,10 @@
     justify-items: center;
   }
 
+  .columnWrapperReverse {
+    flex-direction: row-reverse;
+  }
+
   .textArea {
     display: flex;
     justify-items: center;
@@ -54,7 +58,7 @@
     background: white;
     border-radius: 2rem;
     height: 100%;
-    width: 400px;
+    width: 500px;
     margin: 0;
   }
 
