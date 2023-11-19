@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./App.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Pages from "./Pages";
 
 function App() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const maxPages = 9;
   const getCurrentPage = Number(localStorage.getItem("currentPage"));
   const [currentPage, setCurrentPage] = useState(getCurrentPage || 1);
