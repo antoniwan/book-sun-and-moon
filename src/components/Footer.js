@@ -8,6 +8,7 @@ import {
 
 export default function Footer({
   currentPage,
+  lastPage,
   goToNextPage,
   goToPreviousPage,
   goToFirstPage,
@@ -50,10 +51,12 @@ export default function Footer({
           </button>
         )}
 
-        <button className={styles.button} onClick={goToNextPage}>
-          <ChevronRight />
-          Next Page
-        </button>
+        {currentPage !== lastPage && (
+          <button className={styles.button} onClick={goToNextPage}>
+            <ChevronRight />
+            Next Page
+          </button>
+        )}
       </nav>
 
       <div>

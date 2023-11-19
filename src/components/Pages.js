@@ -6,6 +6,7 @@ import Page5 from "../pages/page5-sunhours";
 import Page6 from "../pages/page6-goodbyesun";
 import Page7 from "../pages/page7-stars";
 import Page8 from "../pages/page8-momdadmoon";
+import Page9 from "../pages/page9-theend";
 
 export default function Pages({ currentPage }) {
   switch (currentPage) {
@@ -23,6 +24,8 @@ export default function Pages({ currentPage }) {
       return <Page7 />;
     case 8:
       return <Page8 />;
+    case 9:
+      return <Page9 />;
     default:
       return <TitlePage />;
   }

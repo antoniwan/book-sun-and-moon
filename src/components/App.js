@@ -5,11 +5,15 @@ import Footer from "./Footer";
 import Pages from "./Pages";
 
 function App() {
+  const maxPages = 9;
   const getCurrentPage = Number(localStorage.getItem("currentPage"));
   const [currentPage, setCurrentPage] = useState(getCurrentPage || 1);
 
   const HandleGoToNextPage = () => {
-    const nextPage = currentPage + 1;
+    let nextPage = currentPage + 1;
+    if (nextPage >= maxPages) {
+      nextPage = 9;
+    }
     localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
   };
@@ -28,7 +32,11 @@ function App() {
     setCurrentPage(1);
   };
 
-  const HandleGoToLastPage = () => {};
+  const HandleGoToLastPage = () => {
+    const lastPage = maxPages;
+    localStorage.setItem(lastPage);
+    setCurrentPage(lastPage);
+  };
 
   return (
     <>
@@ -38,6 +46,7 @@ function App() {
       </main>
       <Footer
         currentPage={currentPage}
+        lastPage={maxPages}
         goToNextPage={HandleGoToNextPage}
         goToPreviousPage={HandleGoToPreviousPage}
         goToFirstPage={HandleGoToFirstPage}
