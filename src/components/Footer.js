@@ -6,18 +6,24 @@ import {
   ChevronRight,
 } from "react-feather";
 
-export default function Footer({ currentPage }) {
+export default function Footer({
+  currentPage,
+  goToNextPage,
+  goToPreviousPage,
+  goToFirstPage,
+  goToLastPage,
+}) {
   return (
     <footer className={styles.footer}>
       {false && (
         <nav className={styles.nav}>
           {currentPage !== 1 && (
-            <button className={styles.button}>
+            <button className={styles.button} onClick={goToFirstPage}>
               <SkipBack />
               First Page
             </button>
           )}
-          <button className={styles.button}>
+          <button className={styles.button} onClick={goToLastPage}>
             <SkipForward /> Last Page
           </button>
         </nav>
@@ -25,12 +31,22 @@ export default function Footer({ currentPage }) {
 
       <nav className={styles.nav}>
         {currentPage !== 1 && (
-          <button className={` ${styles.button}`}>
+          <button className={styles.button} onClick={goToFirstPage}>
+            <SkipBack />
+            First Page
+          </button>
+        )}
+
+        {currentPage !== 1 && (
+          <button className={` ${styles.button}`} onClick={goToPreviousPage}>
             <ChevronLeft />
             Previous Page
           </button>
         )}
-        <button className={styles.button}>
+
+        <div>Page {currentPage}</div>
+
+        <button className={styles.button} onClick={goToNextPage}>
           <ChevronRight />
           Next Page
         </button>
@@ -38,8 +54,8 @@ export default function Footer({ currentPage }) {
 
       <div>
         <p>
-          Written with <span className="emoji">❤️</span> for my daugther and
-          nephew.
+          Written & built with <span className="emoji">❤️</span> for my daughter
+          and nephew.
         </p>
       </div>
     </footer>

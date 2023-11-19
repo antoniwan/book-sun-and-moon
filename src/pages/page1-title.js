@@ -6,11 +6,8 @@ export default function TitlePage() {
   return (
     <PageWrapper>
       <h2 className={styles.title}>
-        Mia, the Sun{" "}
-        <span className={styles["sun-emoji-wrapper"]}>
-          <span className={styles["sun-emoji"]}>☀️</span>
-        </span>
-        , and her Moon{" "}
+        Mia, the Sun <span className={styles["sun-emoji"]}>☀️</span>, and her
+        Moon{" "}
         <span className={`${styles.emoji} ${styles["moon-emoji"]}`}>🌙</span>
       </h2>
 
