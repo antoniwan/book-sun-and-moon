@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import graphic from "../graphics/page-6.png";
 
 export default function Page6() {
   return (
@@ -9,7 +9,11 @@ export default function Page6() {
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
             It's time to say goodbye to the sunshine and the daylight, but Mia
-            rejoices because the moon is about to say <em>-"Hi!"</em>
+            rejoices because the moon is about to say{" "}
+            <em>
+              -"Hi! Hello! Good day good night good night good day!" A song that
+              Mia made up!
+            </em>
           </p>
         </div>
 
@@ -17,7 +21,7 @@ export default function Page6() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={welcomeGraphic}
+              src={graphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>

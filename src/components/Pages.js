@@ -11,9 +11,9 @@ import Page9 from "../pages/page9-theend";
 export default function Pages({ currentPage }) {
   switch (currentPage) {
     case 2:
-      return <Page2 />;
-    case 3:
       return <Page3 />;
+    case 3:
+      return <Page2 />;
     case 4:
       return <Page4 />;
     case 5:

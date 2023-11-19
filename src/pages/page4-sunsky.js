@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import graphic from "../graphics/page-4.png";
 
 export default function Page4() {
   return (
@@ -8,9 +8,9 @@ export default function Page4() {
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            Whenever Mia feels the sunshine on her skin, her smile shines, and
-            as she looks into the sky with a bright big{" "}
-            <em>"Hi sun! Thank you for the light!"</em>
+            Another day goes by and whenever Mia feels the sunshine on her skin,
+            her smile shines, and as she looks into the sky with a bright big,
+            she screams -<em>"Hi sun! Thank you for the warmth and light!"</em>
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export default function Page4() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={welcomeGraphic}
+              src={graphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>

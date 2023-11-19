@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import graphic from "../graphics/page-3.png";
 
 export default function Page3() {
   return (
@@ -11,7 +11,11 @@ export default function Page3() {
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
             Every day, the sun says hi and shines so bright. This consistency
-            makes Mia smile.
+            makes Mia smile. Off she goes, running to play in the park!
+          </p>
+          <p className={styles.paragraph}>
+            Each new sun is a new day of life. A new day of fun, and a new day
+            for smiles.
           </p>
         </div>
 
@@ -19,7 +23,7 @@ export default function Page3() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={welcomeGraphic}
+              src={graphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>

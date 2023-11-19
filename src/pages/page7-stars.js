@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import graphic from "../graphics/page-7.png";
 
 export default function Page7() {
   return (
@@ -19,7 +19,7 @@ export default function Page7() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={welcomeGraphic}
+              src={graphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>
