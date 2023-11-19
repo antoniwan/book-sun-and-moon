@@ -31,6 +31,12 @@ export default function Footer({
 
       <nav className={styles.nav}>
         {currentPage !== 1 && (
+          <button className={`${styles.button} ${styles.textButton}`}>
+            Page {currentPage}
+          </button>
+        )}
+
+        {currentPage !== 1 && (
           <button className={styles.button} onClick={goToFirstPage}>
             <SkipBack />
             First Page
@@ -43,8 +49,6 @@ export default function Footer({
             Previous Page
           </button>
         )}
-
-        <div>Page {currentPage}</div>
 
         <button className={styles.button} onClick={goToNextPage}>
           <ChevronRight />

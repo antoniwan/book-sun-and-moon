@@ -6,13 +6,13 @@ export default function Page2() {
   return (
     <PageWrapper>
       <div className={styles.columnsWrapper}>
-        <div className={`${styles.column} ${styles.textArea}`}>
+        <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
             Mia is four years old, and she’s growing up to be joyful and strong.
           </p>
         </div>
 
-        <div className={`${styles.column} ${styles.graphicColumn}`}>
+        <div className={` ${styles.graphicColumn}`}>
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
