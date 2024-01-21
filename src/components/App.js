@@ -49,6 +49,8 @@ function App() {
         <Pages currentPage={currentPage} />
       </main>
       <Footer
+        // currentLanguage={currentLanguage}
+        // switchLanguage={HandleSwitchLanguage}
         currentPage={currentPage}
         lastPage={maxPages}
         goToNextPage={HandleGoToNextPage}

@@ -32,8 +32,8 @@
 
 @media (min-width: 800px) {
   .title {
-    font-size: 80px;
-    line-height: 120px;
+    font-size: 60px;
+    line-height: 1rem;
   }
   .author {
     font-size: 44px;

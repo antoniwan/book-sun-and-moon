@@ -1,3 +1,4 @@
+import { useLanguage } from "./LanguageContext";
 import styles from "./Footer.module.css";
 import {
   SkipBack,
@@ -14,6 +15,8 @@ export default function Footer({
   goToFirstPage,
   goToLastPage,
 }) {
+  const { language, switchLanguage } = useLanguage();
+
   return (
     <footer className={styles.footer}>
       {false && (
@@ -31,6 +34,13 @@ export default function Footer({
       )}
 
       <nav className={styles.nav}>
+        <button
+          className={styles.button}
+          onClick={() => switchLanguage(language)}
+        >
+          {language === "en" ? "English" : "Español"}
+        </button>
+
         {currentPage !== 1 && (
           <button className={`${styles.button} ${styles.textButton}`}>
             Page {currentPage}
