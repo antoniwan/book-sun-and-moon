@@ -38,42 +38,51 @@ export default function Footer({
           className={styles.button}
           onClick={() => switchLanguage(language)}
         >
-          {language === "en" ? "English" : "Español"}
+          {language === "en" ? "🇺🇸 English" : "🇵🇷 Español"}
         </button>
 
         {currentPage !== 1 && (
           <button className={`${styles.button} ${styles.textButton}`}>
-            Page {currentPage}
+            {language === "en" ? "Page" : "Página"} {currentPage}
           </button>
         )}
 
         {currentPage !== 1 && (
           <button className={styles.button} onClick={goToFirstPage}>
             <SkipBack />
-            First Page
+            {language === "en" ? "First Page" : "Primera Página"}
           </button>
         )}
 
         {currentPage !== 1 && (
           <button className={` ${styles.button}`} onClick={goToPreviousPage}>
             <ChevronLeft />
-            Previous Page
+            {language === "en" ? "Previous Page" : "Página Anterior"}
           </button>
         )}
 
         {currentPage !== lastPage && (
           <button className={styles.button} onClick={goToNextPage}>
             <ChevronRight />
-            Next Page
+            {language === "en" ? "Next Page" : "Próxima Página"}
           </button>
         )}
       </nav>
 
       <div>
-        <p>
-          Written & built with <span className="emoji">❤️</span> for my daughter
-          and nephew.
-        </p>
+        {language === "en" && (
+          <p>
+            Written & built with <span className="emoji">❤️</span> for my
+            daughter and nephew.
+          </p>
+        )}
+
+        {language === "es" && (
+          <p>
+            Escrito y construito con mucho <span className="emoji">❤️</span>{" "}
+            para mi hija y sobrino.
+          </p>
+        )}
       </div>
     </footer>
   );
