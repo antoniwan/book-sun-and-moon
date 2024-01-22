@@ -47,7 +47,7 @@ export default function Footer({
           </button>
         )}
 
-        {currentPage !== 1 && (
+        {false && currentPage !== 1 && (
           <button className={styles.button} onClick={goToFirstPage}>
             <SkipBack />
             {language === "en" ? "First Page" : "Primera Página"}
@@ -71,14 +71,14 @@ export default function Footer({
 
       <div>
         {language === "en" && (
-          <p>
+          <p className={styles.footerP}>
             Written, designed, & built with <span className="emoji">❤️</span>{" "}
             for my daughter and nephew.
           </p>
         )}
 
         {language === "es" && (
-          <p>
+          <p className={styles.footerP}>
             Escrito, diseñado, y programado con mucho{" "}
             <span className="emoji">❤️</span> para mi hija y sobrino.
           </p>
