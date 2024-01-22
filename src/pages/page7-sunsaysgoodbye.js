@@ -1,17 +1,19 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import graphic from "../graphics/page-4.png";
 
-export default function Page8() {
+export default function Page7() {
   return (
     <PageWrapper>
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            <em>"Mom, Dad, the moon has so many different faces"</em>. Says Mia,
-            ever so curious.{" "}
-            <em>"Yes, because the moon, just like us, has many sides."</em> Mia
-            giggled as this fact brought humor into her night.
+            As nighttime is nearby, it's time to say Goodbye to the sunshine and
+            the daylight, but Mia rejoices because the moon is about to shine
+            <em>
+              -"🎶 Hi! Hello! Good day, good night, good night, good day! 🎵"
+            </em>{" "}
+            A song that Mia made up for the moon!
           </p>
         </div>
 
@@ -19,7 +21,7 @@ export default function Page8() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={welcomeGraphic}
+              src={graphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>

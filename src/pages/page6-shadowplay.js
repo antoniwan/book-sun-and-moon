@@ -1,19 +1,19 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-6.png";
+import graphic from "../graphics/page-3.png";
 
 export default function Page6() {
   return (
     <PageWrapper>
-      <div className={styles.columnsWrapper}>
+      <div
+        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
+      >
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            It's time to say goodbye to the sunshine and the daylight, but Mia
-            rejoices because the moon is about to say{" "}
-            <em>
-              -"Hi! Hello! Good day good night good night good day!" A song that
-              Mia made up!
-            </em>
+            As the hours of each day go by and the sun passes, it creates many
+            shadows for our brave and joyful girl and her friends to play and
+            enjoy. <em>"The sun also plays with us!"</em> Mia explains
+            excitedly.
           </p>
         </div>
 

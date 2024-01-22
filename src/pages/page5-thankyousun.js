@@ -1,17 +1,17 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-7.png";
+import graphic from "../graphics/page-4.png";
 
-export default function Page7() {
+export default function Page5() {
   return (
     <PageWrapper>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
+      <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            The nighttime is also so full of stars! Mia has many hours to
-            explore the night sky!
+            As another day goes by, and whenever Mia feels the sunshine on her
+            skin, her smile shines, and as she looks into the sky with a bright,
+            big smile, she screams,{" "}
+            <em>"Hi, Sun! Thank you for the warmth and light!"</em>
           </p>
         </div>
 

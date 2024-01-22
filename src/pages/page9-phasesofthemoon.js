@@ -10,12 +10,17 @@ export default function Page9() {
       >
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            <em>"It's time for bed,"</em> said Mia with the moonshine glowing on
-            her face, and so happy that tomorrow is another day.{" "}
-            <em>"Good night, moon!"</em>
+            Mia thinks the moon has many faces because it looks different every
+            night. What a curious girl! Mia's parents explain that the moon is
+            similar to us as we have many sides. We are family, friends, and
+            workers, asleep, awake, sometimes sick, sometimes happy, sometimes
+            we hide in the shadows, sometimes we bask in the sun, sometimes we
+            are parents, sometimes we are daughters and sons, sometimes we are
+            awake, and other times asleep, sometimes we are there, and sometimes
+            we must go away, we always have many different sides and phases,
+            just like the moon, our lives are everchanging. Mia giggles,
+            remembering or creating some kind of humor from this explanation.
           </p>
-
-          <h3 className={styles.theEnd}>The End</h3>
         </div>
 
         <div className={` ${styles.graphicColumn}`}>

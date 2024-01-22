@@ -9,14 +9,14 @@ function App() {
     window.scrollTo(0, 0);
   }, []);
 
-  const maxPages = 9;
+  const maxPages = 11;
   const getCurrentPage = Number(localStorage.getItem("currentPage"));
   const [currentPage, setCurrentPage] = useState(getCurrentPage || 1);
 
   const HandleGoToNextPage = () => {
     let nextPage = currentPage + 1;
     if (nextPage >= maxPages) {
-      nextPage = 9;
+      nextPage = 11;
     }
     localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
@@ -49,8 +49,6 @@ function App() {
         <Pages currentPage={currentPage} />
       </main>
       <Footer
-        // currentLanguage={currentLanguage}
-        // switchLanguage={HandleSwitchLanguage}
         currentPage={currentPage}
         lastPage={maxPages}
         goToNextPage={HandleGoToNextPage}

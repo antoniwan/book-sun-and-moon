@@ -1,17 +1,15 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-3.png";
+import welcomeGraphic from "../graphics/page-title.png";
 
-export default function Page1() {
+export default function Page8() {
   return (
     <PageWrapper>
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            Every day, the sun says hi and shines so warmly. The sun makes Mia's
-            eyes squint and sometimes smile. Off she goes, running to play in
-            the park! Each new sun is a new day of life. A new day of fun and a
-            new day for smiles.
+            The nighttime is also so full of stars! Mia has many hours to
+            explore the night sky!
           </p>
         </div>
 
@@ -19,7 +17,7 @@ export default function Page1() {
           <div className={styles["graphic-wrapper"]}>
             <img
               className={styles.graphic}
-              src={graphic}
+              src={welcomeGraphic}
               alt="Mia's smile is like sunshine!"
             ></img>
           </div>
