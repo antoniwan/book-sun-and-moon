@@ -72,15 +72,15 @@ export default function Footer({
       <div>
         {language === "en" && (
           <p>
-            Written & built with <span className="emoji">❤️</span> for my
-            daughter and nephew.
+            Written, designed, & built with <span className="emoji">❤️</span>{" "}
+            for my daughter and nephew.
           </p>
         )}
 
         {language === "es" && (
           <p>
-            Escrito y construito con mucho <span className="emoji">❤️</span>{" "}
-            para mi hija y sobrino.
+            Escrito, diseñado, y programado con mucho{" "}
+            <span className="emoji">❤️</span> para mi hija y sobrino.
           </p>
         )}
       </div>
