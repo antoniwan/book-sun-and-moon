@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-3.png";
+import graphic from "../graphics/graphic-shadowplay.png";
 
 export default function Page6() {
   return (

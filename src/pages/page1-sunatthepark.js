@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-3.png";
+import graphic from "../graphics/graphic-park.png";
 
 export default function Page1() {
   return (
@@ -20,7 +20,7 @@ export default function Page1() {
             <img
               className={styles.graphic}
               src={graphic}
-              alt="Mia's smile is like sunshine!"
+              alt="A 4-year-old girl with long, flowing brown hair, engaged in a playful moment with friends in a sunny playground, her smile radiant even as she becomes surrounded by softly blurred figures, illustrating the power of innocent joy amidst a backdrop of gentle shadow - she is playing in between shadows created by the trees and the playground"
             ></img>
           </div>
         </div>

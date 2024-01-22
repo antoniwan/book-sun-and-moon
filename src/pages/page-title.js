@@ -9,18 +9,11 @@ export default function TitlePage() {
   return (
     <PageWrapper>
       {language === "en" && (
-        <h2 className={styles.title}>
-          Mia, the Sun <span className={styles["sun-emoji"]}>☀️</span>, and her
-          Moon{" "}
-          <span className={`${styles.emoji} ${styles["moon-emoji"]}`}>🌙</span>
-        </h2>
+        <h2 className={styles.title}>Mia, the Sun, and her Moon</h2>
       )}
 
       {language === "es" && (
-        <h2 className={styles.title}>
-          Mia, el Sol <span className={styles["sun-emoji"]}>☀️</span>, y su Luna{" "}
-          <span className={`${styles.emoji} ${styles["moon-emoji"]}`}>🌙</span>
-        </h2>
+        <h2 className={styles.title}>Mia, el Sol, y su Luna</h2>
       )}
 
       <div className={styles["graphic-wrapper"]}>

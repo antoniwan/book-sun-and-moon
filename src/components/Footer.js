@@ -22,12 +22,12 @@ export default function Footer({
       {false && (
         <nav className={styles.nav}>
           {currentPage !== 1 && (
-            <button className={styles.button} onClick={goToFirstPage}>
+            <button className={styles.button} onClick={() => goToFirstPage()}>
               <SkipBack />
               First Page
             </button>
           )}
-          <button className={styles.button} onClick={goToLastPage}>
+          <button className={styles.button} onClick={() => goToLastPage()}>
             <SkipForward /> Last Page
           </button>
         </nav>
@@ -48,21 +48,24 @@ export default function Footer({
         )}
 
         {false && currentPage !== 1 && (
-          <button className={styles.button} onClick={goToFirstPage}>
+          <button className={styles.button} onClick={() => goToFirstPage()}>
             <SkipBack />
             {language === "en" ? "First Page" : "Primera Página"}
           </button>
         )}
 
         {currentPage !== 1 && (
-          <button className={` ${styles.button}`} onClick={goToPreviousPage}>
+          <button
+            className={` ${styles.button}`}
+            onClick={() => goToPreviousPage()}
+          >
             <ChevronLeft />
             {language === "en" ? "Previous Page" : "Página Anterior"}
           </button>
         )}
 
         {currentPage !== lastPage && (
-          <button className={styles.button} onClick={goToNextPage}>
+          <button className={styles.button} onClick={() => goToNextPage()}>
             <ChevronRight />
             {language === "en" ? "Next Page" : "Próxima Página"}
           </button>
