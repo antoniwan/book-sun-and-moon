@@ -43,7 +43,7 @@ export default function Footer({
 
         {currentPage !== 1 && (
           <button className={`${styles.button} ${styles.textButton}`}>
-            {language === "en" ? "Page" : "Página"} {currentPage}
+            {language === "en" ? "Page" : "Página"} {currentPage - 1}
           </button>
         )}
 

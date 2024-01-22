@@ -2,7 +2,7 @@ import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/page-3.png";
 
-export default function Page3() {
+export default function Page2() {
   return (
     <PageWrapper>
       <div
@@ -10,12 +10,9 @@ export default function Page3() {
       >
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            Every day, the sun says hi and shines so bright. This consistency
-            makes Mia smile. Off she goes, running to play in the park!
-          </p>
-          <p className={styles.paragraph}>
-            Each new sun is a new day of life. A new day of fun, and a new day
-            for smiles.
+            Every day, the sun says hi and shines so bright. The sun makes Mia's
+            skin warm. Today is different; she won't go to the park; she'd
+            instead go to the beach and play on the sand.
           </p>
         </div>
 
