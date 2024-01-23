@@ -9,14 +9,14 @@ export default function Header() {
       <h1 className={styles["header-title"]}>
         {language === "en" && (
           <>
-            Mia, the Sun <span className="emoji">☀️</span>, and her Moon{" "}
+            Mia, the Sun <span className="emoji">☀️</span>, and the Moon{" "}
             <span className="emoji">🌙</span>
           </>
         )}
 
         {language === "es" && (
           <>
-            Mia, el Sol <span className="emoji">☀️</span>, y su Luna{" "}
+            Mia, el Sol <span className="emoji">☀️</span>, y la Luna{" "}
             <span className="emoji">🌙</span>
           </>
         )}

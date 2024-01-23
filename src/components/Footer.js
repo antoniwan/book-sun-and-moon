@@ -70,6 +70,13 @@ export default function Footer({
             {language === "en" ? "Next Page" : "Próxima Página"}
           </button>
         )}
+
+        {currentPage === 11 && (
+          <button className={styles.button} onClick={() => goToFirstPage()}>
+            <SkipBack />
+            {language === "es" ? "Comenzar Nuevamente" : "Start Over"}
+          </button>
+        )}
       </nav>
 
       <div>

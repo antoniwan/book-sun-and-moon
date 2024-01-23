@@ -18,6 +18,7 @@
 .theEnd {
   text-align: center;
   font-size: 32px;
+  margin: 0;
 }
 
 .paragraph {
@@ -68,6 +69,7 @@
     width: 500px;
     margin: 0;
     margin-right: 2rem;
+    margin-left: 2rem;
   }
 
   .paragraph {

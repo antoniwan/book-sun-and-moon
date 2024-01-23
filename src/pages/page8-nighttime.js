@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-nightskysong.png";
+import welcomeGraphic from "../graphics/graphic-space.png";
 
 export default function Page8() {
   return (
@@ -8,8 +8,8 @@ export default function Page8() {
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           <p className={styles.paragraph}>
-            The nighttime is also so full of stars! Mia has many hours to
-            explore the night sky!
+            The nighttime is full of stars! Mia has many hours to graze into the
+            night sky!
           </p>
         </div>
 
