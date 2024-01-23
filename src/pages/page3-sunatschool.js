@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-school.png";
+import graphic from "../graphics/graphic-school.jpg";
 
 export default function Page3({ language }) {
   return (

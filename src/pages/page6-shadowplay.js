@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-shadowplay.png";
+import graphic from "../graphics/graphic-shadowplay.jpg";
 
 export default function Page6({ language }) {
   return (

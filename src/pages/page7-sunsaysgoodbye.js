@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-nightskysong.png";
+import graphic from "../graphics/graphic-nightskysong.jpg";
 
 export default function Page7({ language }) {
   return (

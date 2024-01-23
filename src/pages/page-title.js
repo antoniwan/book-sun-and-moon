@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./TitlePage.module.css";
-import welcomeGraphic from "../graphics/page-title.png";
+import welcomeGraphic from "../graphics/page-title.jpg";
 
 export default function TitlePage({ language }) {
   return (

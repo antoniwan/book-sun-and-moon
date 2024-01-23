@@ -1,6 +1,6 @@
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-space.png";
+import welcomeGraphic from "../graphics/graphic-space.jpg";
 
 export default function Page8({ language }) {
   return (
