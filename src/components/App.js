@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styles from "./App.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Pages from "./Pages";
 
 function App() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const maxPages = 11;
   const getCurrentPage = Number(localStorage.getItem("currentPage"));
   const [currentPage, setCurrentPage] = useState(getCurrentPage || 1);
+
+  const doScrollToTopOfPage = () => {
+    window.scrollTo(0, 0);
+  };
 
   const HandleGoToNextPage = () => {
     let nextPage = currentPage + 1;
@@ -20,6 +20,7 @@ function App() {
     }
     localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
+    doScrollToTopOfPage();
   };
 
   const HandleGoToPreviousPage = () => {
@@ -29,17 +30,20 @@ function App() {
     }
     localStorage.setItem("currentPage", nextPage);
     setCurrentPage(nextPage);
+    doScrollToTopOfPage();
   };
 
   const HandleGoToFirstPage = () => {
     localStorage.setItem("currentPage", 1);
     setCurrentPage(1);
+    doScrollToTopOfPage();
   };
 
   const HandleGoToLastPage = () => {
     const lastPage = maxPages;
     localStorage.setItem(lastPage);
     setCurrentPage(lastPage);
+    doScrollToTopOfPage();
   };
 
   return (
