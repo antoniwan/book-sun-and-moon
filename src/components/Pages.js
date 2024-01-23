@@ -1,3 +1,4 @@
+import { useLanguage } from "../components/LanguageContext";
 import TitlePage from "../pages/page-title";
 import Page1 from "../pages/page1-sunatthepark";
 import Page2 from "../pages/page2-sunatthebeach";
@@ -11,28 +12,30 @@ import Page9 from "../pages/page9-phasesofthemoon";
 import Page10 from "../pages/page10-bedtime-end";
 
 export default function Pages({ currentPage }) {
+  const { language } = useLanguage();
+
   switch (currentPage) {
     case 2:
-      return <Page1 />;
+      return <Page1 language={language} />;
     case 3:
-      return <Page2 />;
+      return <Page2 language={language} />;
     case 4:
-      return <Page3 />;
+      return <Page3 language={language} />;
     case 5:
-      return <Page4 />;
+      return <Page4 language={language} />;
     case 6:
-      return <Page5 />;
+      return <Page5 language={language} />;
     case 7:
-      return <Page6 />;
+      return <Page6 language={language} />;
     case 8:
-      return <Page7 />;
+      return <Page7 language={language} />;
     case 9:
-      return <Page8 />;
+      return <Page8 language={language} />;
     case 10:
-      return <Page9 />;
+      return <Page9 language={language} />;
     case 11:
-      return <Page10 />;
+      return <Page10 language={language} />;
     default:
-      return <TitlePage />;
+      return <TitlePage language={language} />;
   }
 }

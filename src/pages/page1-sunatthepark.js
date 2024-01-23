@@ -1,11 +1,8 @@
-import { useLanguage } from "../components/LanguageContext";
 import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/graphic-park.png";
 
-export default function Page1() {
-  const { language } = useLanguage();
-
+export default function Page1({ language }) {
   return (
     <PageWrapper>
       <div className={styles.columnsWrapper}>

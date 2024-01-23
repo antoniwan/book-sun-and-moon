@@ -1,11 +1,8 @@
-import { useLanguage } from "../components/LanguageContext";
 import PageWrapper from "../components/PageWrapper";
 import styles from "./TitlePage.module.css";
 import welcomeGraphic from "../graphics/page-title.png";
 
-export default function TitlePage() {
-  const { language } = useLanguage();
-
+export default function TitlePage({ language }) {
   return (
     <PageWrapper>
       {language === "en" && (
