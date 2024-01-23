@@ -2,19 +2,40 @@ import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/graphic-beach.png";
 
-export default function Page2() {
+export default function Page2({ language }) {
   return (
     <PageWrapper>
       <div
         className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
       >
         <div className={` ${styles.textArea}`}>
-          <p className={styles.paragraph}>
-            Every day, the sun says hi and shines so bright. The sun makes Mia's
-            skin warm. Today is different; she won't go to the park; she'd
-            instead go to the beach and play on the sand. This day is special
-            because her nephew Dario joins them in the fun.
-          </p>
+          {language === "en" && (
+            <>
+              <p className={styles.paragraph}>
+                Every day, the sun says hi and shines so warmly. The sun makes
+                Mia's skin warm.
+              </p>
+              <p className={styles.paragraph}>
+                Today is different; she won't go to the park; she'd instead go
+                to the beach and play on the sand. This day is special because
+                her cousin Dario joins them in the fun.
+              </p>
+            </>
+          )}
+
+          {language === "es" && (
+            <>
+              <p className={styles.paragraph}>
+                Cada día, el Sol dice hola y brilla con mucha calidez. El sol
+                hace que la piel de Mia se ponga calentita.
+              </p>
+              <p className={styles.paragraph}>
+                Hoy es un día diferente; Mia no va al parque porque se va para
+                la playa a jugar en la arena. El día también es especial pues su
+                primo Dario la acompaña en la diversión.
+              </p>
+            </>
+          )}
         </div>
 
         <div className={` ${styles.graphicColumn}`}>

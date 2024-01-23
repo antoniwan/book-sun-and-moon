@@ -10,7 +10,7 @@ export default function Page1({ language }) {
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
-                Every day, the sun says hi and shines so warmly. The sun makes
+                Every day, the sun says hi and shines so bright. The sun makes
                 Mia's brown eyes squint and sometimes smile.
               </p>
               <p className={styles.paragraph}>
