@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/graphic-bday.jpg";
 
 export default function Page4({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div
         className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
       >
@@ -49,6 +48,6 @@ export default function Page4({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

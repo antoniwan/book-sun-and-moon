@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import welcomeGraphic from "../graphics/graphic-space.jpg";
 
 export default function Page8({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           {language === "en" && (
@@ -37,6 +36,6 @@ export default function Page8({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

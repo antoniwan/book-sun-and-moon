@@ -1,11 +1,15 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/page-1.avif";
 
 export default function Page1({ language }) {
   return (
-    <PageWrapper>
-      <div className={styles.columnsWrapper}>
+    <>
+      <div className="columns-1 md:columns-2">
+        <img
+          className="w-screen object-cover"
+          src={graphic}
+          alt="A 4-year-old girl with long, flowing brown hair, engaged in a playful moment with friends in a sunny playground, her smile radiant even as she becomes surrounded by softly blurred figures, illustrating the power of innocent joy amidst a backdrop of gentle shadow - she is playing in between shadows created by the trees and the playground"
+        />
         <div className={` ${styles.textArea}`}>
           {language === "en" && (
             <>
@@ -35,17 +39,7 @@ export default function Page1({ language }) {
             </>
           )}
         </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={graphic}
-              alt="A 4-year-old girl with long, flowing brown hair, engaged in a playful moment with friends in a sunny playground, her smile radiant even as she becomes surrounded by softly blurred figures, illustrating the power of innocent joy amidst a backdrop of gentle shadow - she is playing in between shadows created by the trees and the playground"
-            ></img>
-          </div>
-        </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/graphic-nightskysong.jpg";
 
 export default function Page7({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           {language === "en" && (
@@ -48,6 +47,6 @@ export default function Page7({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

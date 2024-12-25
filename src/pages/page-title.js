@@ -1,4 +1,4 @@
-import welcomeGraphic from "../graphics/page-1.avif";
+import welcomeGraphic from "../graphics/title-image.avif";
 
 export default function TitlePage({ language }) {
   return (

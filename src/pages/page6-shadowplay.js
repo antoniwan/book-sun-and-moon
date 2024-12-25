@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/graphic-shadowplay.jpg";
 
 export default function Page6({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div
         className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
       >
@@ -44,6 +43,6 @@ export default function Page6({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

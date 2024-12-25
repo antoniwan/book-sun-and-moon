@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import graphic from "../graphics/page-4.jpg";
 
 export default function Page5({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div className={styles.columnsWrapper}>
         <div className={` ${styles.textArea}`}>
           {language === "en" && (
@@ -43,6 +42,6 @@ export default function Page5({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

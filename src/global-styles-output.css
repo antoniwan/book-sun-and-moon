@@ -625,6 +625,10 @@ video {
   height: 100vh;
 }
 
+.h-full {
+  height: 100%;
+}
+
 .w-48 {
   width: 12rem;
 }
@@ -651,6 +655,10 @@ video {
 
 .grow {
   flex-grow: 1;
+}
+
+.columns-1 {
+  columns: 1;
 }
 
 .flex-row {
@@ -956,6 +964,10 @@ h6 {
 
   .md\:w-44 {
     width: 11rem;
+  }
+
+  .md\:columns-2 {
+    columns: 2;
   }
 
   .md\:flex-row {

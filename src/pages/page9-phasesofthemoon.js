@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import welcomeGraphic from "../graphics/graphic-moon.jpg";
 
 export default function Page9({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div
         className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
       >
@@ -54,6 +53,6 @@ export default function Page9({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

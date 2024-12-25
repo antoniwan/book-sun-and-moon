@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
 import welcomeGraphic from "../graphics/graphic-goodnight.jpg";
 
 export default function Page10({ language }) {
   return (
-    <PageWrapper>
+    <>
       <div
         className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
       >
@@ -45,6 +44,6 @@ export default function Page10({ language }) {
           </div>
         </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }
