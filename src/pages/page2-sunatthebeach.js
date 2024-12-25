@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-beach.jpg";
+import graphic from "../graphics/beach-play-2.avif";
 
 export default function Page2({ language }) {
   return (

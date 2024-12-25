@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/page-1.avif";
+import graphic from "../graphics/park-play.avif";
 
 export default function Page1({ language }) {
   return (
