@@ -897,6 +897,11 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -1073,6 +1078,10 @@ h6 {
 
   .md\:w-4\/5 {
     width: 80%;
+  }
+
+  .md\:w-1\/5 {
+    width: 20%;
   }
 
   .md\:columns-2 {

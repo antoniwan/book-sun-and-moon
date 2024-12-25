@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-goodnight.jpg";
+import welcomeGraphic from "../graphics/night-moon-girl.avif";
 
 export default function Page10({ language }) {
   return (
@@ -10,7 +10,7 @@ export default function Page10({ language }) {
           src={welcomeGraphic}
           alt="Mia's smile is like sunshine!"
         />
-        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-4/5 p-8">
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/5 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -19,7 +19,7 @@ export default function Page10({ language }) {
                 <em>"Good night, moon!"</em>
               </p>
 
-              <h3 className={styles.theEnd}>The End</h3>
+              <h3 className="text-5xl">The End</h3>
             </>
           )}
 
@@ -32,7 +32,7 @@ export default function Page10({ language }) {
                 <em>“¡Buenas noches, Luna!”</em>
               </p>
 
-              <h3 className={styles.theEnd}>Fin</h3>
+              <h3 className="text-5xl">Fin</h3>
             </>
           )}
         </div>

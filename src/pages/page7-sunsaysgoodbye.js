@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-nightskysong.jpg";
+import graphic from "../graphics/song-night.avif";
 
 export default function Page7({ language }) {
   return (

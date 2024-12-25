@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-bday.jpg";
+import graphic from "../graphics/birthday.avif";
 
 export default function Page4({ language }) {
   return (

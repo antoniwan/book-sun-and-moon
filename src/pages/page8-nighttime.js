@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-space.jpg";
+import welcomeGraphic from "../graphics/colorful-sky.avif";
 
 export default function Page8({ language }) {
   return (
@@ -23,9 +23,9 @@ export default function Page8({ language }) {
           {language === "es" && (
             <>
               <p className={styles.paragraph}>
-                ¡El cielo de la noche tiene tantas estrellas! Mia tiene mucho
-                tiempo para explorar el cielo e la noche, ¡su imaginación se
-                vuelve loquita mirando el cielo con sus estrellas y planetas!
+                ¡El cielo de la noche tiene tantas estrellas! Mia tiene un poco
+                de tiempo antes de dormir para explorar el cielo de la noche,
+                ¡su imaginación salta con curiosidad!
               </p>
             </>
           )}

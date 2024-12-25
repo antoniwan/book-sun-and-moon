@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-moon.jpg";
+import welcomeGraphic from "../graphics/more-night-sky.avif";
 
 export default function Page9({ language }) {
   return (
