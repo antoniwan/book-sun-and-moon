@@ -1,10 +1,9 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./TitlePage.module.css";
 import welcomeGraphic from "../graphics/page-1.avif";
 
 export default function TitlePage({ language }) {
   return (
-    <PageWrapper>
+    <div className="">
       {language === "en" && (
         <h2 className={styles.title}>Mia, the Sun, and the Moon</h2>
       )}
@@ -20,6 +19,6 @@ export default function TitlePage({ language }) {
           alt="Mia' is a happy and brave 4-year old girl who is dressed in a pink dress."
         ></img>
       </div>
-    </PageWrapper>
+    </div>
   );
 }

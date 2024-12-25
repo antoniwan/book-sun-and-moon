@@ -9,19 +9,12 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 207, 210, 1) 0%,
+    rgba(255, 207, 210, 1) 35%,
+    rgba(255, 229, 236, 1) 100%
+  );
 }
 
 h1,

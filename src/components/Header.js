@@ -1,12 +1,11 @@
 import { useLanguage } from "./LanguageContext";
-import styles from "./Header.module.css";
 
 export default function Header() {
   const { language } = useLanguage();
 
   return (
-    <header className={styles.header}>
-      <h1 className={styles["header-title"]}>
+    <header className="bg-white p-3 px-6 text-stone-900">
+      <h1 className="m-0 text-xl">
         {language === "en" && (
           <>
             Mia, the Sun <span className="emoji">☀️</span>, and the Moon{" "}

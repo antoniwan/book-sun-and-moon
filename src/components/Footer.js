@@ -7,6 +7,27 @@ import {
   ChevronRight,
 } from "react-feather";
 
+const Disclaimer = () => {
+  const { language } = useLanguage();
+  return (
+    <div>
+      {language === "en" && (
+        <p className="">
+          Written, designed, & built with <span className="emoji">❤️</span> for
+          my daughter and nephew.
+        </p>
+      )}
+
+      {language === "es" && (
+        <p className="">
+          Escrito, diseñado, y programado con mucho{" "}
+          <span className="emoji">❤️</span> para mi hija y sobrino.
+        </p>
+      )}
+    </div>
+  );
+};
+
 export default function Footer({
   currentPage,
   lastPage,
@@ -18,9 +39,9 @@ export default function Footer({
   const { language, switchLanguage } = useLanguage();
 
   return (
-    <footer className={styles.footer}>
+    <footer className="fixed bottom-0 left-0 right-0 p-2 bg-white">
       {false && (
-        <nav className={styles.nav}>
+        <nav className="flex">
           {currentPage !== 1 && (
             <button className={styles.button} onClick={() => goToFirstPage()}>
               <SkipBack />
@@ -64,6 +85,8 @@ export default function Footer({
           </button>
         )}
 
+        <Disclaimer />
+
         {currentPage !== lastPage && (
           <button className={styles.button} onClick={() => goToNextPage()}>
             <ChevronRight />
@@ -78,22 +101,6 @@ export default function Footer({
           </button>
         )}
       </nav>
-
-      <div>
-        {language === "en" && (
-          <p className={styles.footerP}>
-            Written, designed, & built with <span className="emoji">❤️</span>{" "}
-            for my daughter and nephew.
-          </p>
-        )}
-
-        {language === "es" && (
-          <p className={styles.footerP}>
-            Escrito, diseñado, y programado con mucho{" "}
-            <span className="emoji">❤️</span> para mi hija y sobrino.
-          </p>
-        )}
-      </div>
     </footer>
   );
 }

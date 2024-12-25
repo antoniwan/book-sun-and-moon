@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./App.module.css";
 import Header from "./Header";
 import Footer from "./Footer";
 import Pages from "./Pages";
@@ -47,9 +46,9 @@ function App() {
   };
 
   return (
-    <>
+    <div className="relative pb-4">
       {currentPage !== 1 && <Header />}
-      <main className={styles.main}>
+      <main className="">
         <Pages currentPage={currentPage} />
       </main>
       <Footer
@@ -60,7 +59,7 @@ function App() {
         goToFirstPage={HandleGoToFirstPage}
         goToLastPage={HandleGoToLastPage}
       />
-    </>
+    </div>
   );
 }
 
