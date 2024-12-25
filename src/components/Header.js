@@ -4,8 +4,8 @@ export default function Header() {
   const { language } = useLanguage();
 
   return (
-    <header className="bg-white p-3 px-6 text-stone-900">
-      <h1 className="m-0 text-xl">
+    <header className="fixed top-0 left-0 right-0 bg-stone-100/25">
+      <h1 className="m-0 p-4 md:px-8 text-xl md:text-4xl drop-shadow-md text-stone-900">
         {language === "en" && (
           <>
             Mia, the Sun <span className="emoji">☀️</span>, and the Moon{" "}

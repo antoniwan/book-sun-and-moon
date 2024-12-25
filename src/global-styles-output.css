@@ -747,6 +747,10 @@ video {
   background-color: rgb(236 72 153 / var(--tw-bg-opacity, 1));
 }
 
+.bg-stone-100\/25 {
+  background-color: rgb(245 245 244 / 0.25);
+}
+
 .object-cover {
   object-fit: cover;
 }
@@ -838,6 +842,11 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .font-semibold {
@@ -958,6 +967,14 @@ h6 {
     left: 2rem;
   }
 
+  .md\:right-4 {
+    right: 1rem;
+  }
+
+  .md\:top-4 {
+    top: 1rem;
+  }
+
   .md\:w-40 {
     width: 10rem;
   }
@@ -986,8 +1003,18 @@ h6 {
     gap: 0.25rem;
   }
 
+  .md\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .md\:text-8xl {
     font-size: 6rem;
     line-height: 1;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
