@@ -9,7 +9,7 @@ export default function Page7({ language }) {
           className="w-screen h-screen object-cover"
           src={graphic}
           alt="Mia's smile is like sunshine!"
-        ></img>
+        />
         <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/4 p-8">
           {language === "en" && (
             <>

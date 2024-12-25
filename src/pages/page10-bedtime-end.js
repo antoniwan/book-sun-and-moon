@@ -4,10 +4,13 @@ import welcomeGraphic from "../graphics/graphic-goodnight.jpg";
 export default function Page10({ language }) {
   return (
     <>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
-        <div className={` ${styles.textArea}`}>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={welcomeGraphic}
+          alt="Mia's smile is like sunshine!"
+        />
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-4/5 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -32,16 +35,6 @@ export default function Page10({ language }) {
               <h3 className={styles.theEnd}>Fin</h3>
             </>
           )}
-        </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={welcomeGraphic}
-              alt="Mia's smile is like sunshine!"
-            ></img>
-          </div>
         </div>
       </div>
     </>

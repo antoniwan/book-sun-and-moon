@@ -1067,6 +1067,14 @@ h6 {
     width: 50%;
   }
 
+  .md\:w-1 {
+    width: 0.25rem;
+  }
+
+  .md\:w-4\/5 {
+    width: 80%;
+  }
+
   .md\:columns-2 {
     columns: 2;
   }
