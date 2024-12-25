@@ -64,17 +64,27 @@ export default function Footer({
         </button>
 
         {language === "en" && (
-          <p className="text-xs text-center">
+          <a
+            href="https://antonio.builds.software"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-center"
+          >
             Written, designed, & built with <span className="emoji">❤️</span>{" "}
             for my daughter and nephew.
-          </p>
+          </a>
         )}
 
         {language === "es" && (
-          <p className="text-xs text-center">
+          <a
+            href="https://antonio.builds.software"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs text-center"
+          >
             Escrito, diseñado, y programado con mucho{" "}
             <span className="emoji">❤️</span> para mi hija y sobrino.
-          </p>
+          </a>
         )}
       </div>
     </footer>
