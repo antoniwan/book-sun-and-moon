@@ -10,16 +10,16 @@ import {
 const Disclaimer = () => {
   const { language } = useLanguage();
   return (
-    <div>
+    <div className="flex items-center justify-center">
       {language === "en" && (
-        <p className="">
+        <p className="text-xs">
           Written, designed, & built with <span className="emoji">❤️</span> for
           my daughter and nephew.
         </p>
       )}
 
       {language === "es" && (
-        <p className="">
+        <p className="text-xs">
           Escrito, diseñado, y programado con mucho{" "}
           <span className="emoji">❤️</span> para mi hija y sobrino.
         </p>
@@ -40,32 +40,18 @@ export default function Footer({
 
   return (
     <footer className="fixed bottom-0 left-0 right-0 p-2 bg-white">
-      {false && (
-        <nav className="flex">
-          {currentPage !== 1 && (
-            <button className={styles.button} onClick={() => goToFirstPage()}>
-              <SkipBack />
-              First Page
-            </button>
-          )}
-          <button className={styles.button} onClick={() => goToLastPage()}>
-            <SkipForward /> Last Page
-          </button>
-        </nav>
-      )}
-
-      <nav className={styles.nav}>
+      <nav className="flex items-center justify-between">
         <button
           className={styles.button}
           onClick={() => switchLanguage(language)}
         >
-          {language === "en" ? "🇺🇸 English" : "🇵🇷 Español"}
+          {language === "en" ? "English 🇺🇸" : "Español 🇵🇷"}
         </button>
 
         {currentPage !== 1 && (
-          <button className={`${styles.button} ${styles.textButton}`}>
+          <p className="text-sm font-semibold">
             {language === "en" ? "Page" : "Página"} {currentPage - 1}
-          </button>
+          </p>
         )}
 
         {false && currentPage !== 1 && (
@@ -90,7 +76,7 @@ export default function Footer({
         {currentPage !== lastPage && (
           <button className={styles.button} onClick={() => goToNextPage()}>
             <ChevronRight />
-            {language === "en" ? "Next Page" : "Próxima Página"}
+            {language === "en" ? "Next Page" : "Siguiente Página"}
           </button>
         )}
 

@@ -1,21 +1,5 @@
 .button {
-  font-weight: bold;
-  color: #8338ec;
-  border: 0;
-  padding: 5px 14px;
-  border-radius: 4px;
-  margin-right: 14px;
-  margin-bottom: 14px;
-  font-size: 16px;
-  width: 100%;
-  min-width: 135px;
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  align-items: center;
-  align-content: center;
-  background: transparent;
-  cursor: pointer;
+  @apply inline-flex items-center justify-center w-full px-4 py-2 bg-blue-500 text-white font-bold rounded-md hover:bg-blue-600 transition duration-300;
 }
 .textButton {
   color: black;
