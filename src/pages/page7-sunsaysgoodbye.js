@@ -4,8 +4,13 @@ import graphic from "../graphics/graphic-nightskysong.jpg";
 export default function Page7({ language }) {
   return (
     <>
-      <div className={styles.columnsWrapper}>
-        <div className={` ${styles.textArea}`}>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={graphic}
+          alt="Mia's smile is like sunshine!"
+        ></img>
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -25,8 +30,8 @@ export default function Page7({ language }) {
             <>
               <p className={styles.paragraph}>
                 La noche se acerca y es momento de decirle adios a la luz del
-                sol y al día, pero Mia agradece que la hermosa luna esta a punto
-                de brillar -
+                sol, y al día, pero Mia agradece que la hermosa luna esta a
+                punto de brillar -
                 <em>
                   “🎶 ¡Hola! ¡Hello! ¡Buen día, buenas noches, buenas noches,
                   buen día! 🎶”
@@ -35,16 +40,6 @@ export default function Page7({ language }) {
               </p>
             </>
           )}
-        </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={graphic}
-              alt="Mia's smile is like sunshine!"
-            ></img>
-          </div>
         </div>
       </div>
     </>
