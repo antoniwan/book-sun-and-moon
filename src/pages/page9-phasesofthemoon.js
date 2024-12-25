@@ -1,14 +1,16 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import welcomeGraphic from "../graphics/graphic-moon.jpg";
+import welcomeGraphic from "../graphics/more-night-sky.avif";
 
 export default function Page9({ language }) {
   return (
-    <PageWrapper>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
-        <div className={` ${styles.textArea}`}>
+    <>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={welcomeGraphic}
+          alt="Mia's smile is like sunshine!"
+        ></img>
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-4/5 p-8">
           {language === "en" && (
             <p className={styles.paragraph}>
               Mia thinks the moon has many faces because it looks different
@@ -43,17 +45,7 @@ export default function Page9({ language }) {
             </p>
           )}
         </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={welcomeGraphic}
-              alt="Mia's smile is like sunshine!"
-            ></img>
-          </div>
-        </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

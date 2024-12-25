@@ -1,14 +1,16 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-bday.jpg";
+import graphic from "../graphics/birthday.avif";
 
 export default function Page4({ language }) {
   return (
-    <PageWrapper>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
-        <div className={` ${styles.textArea}`}>
+    <>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={graphic}
+          alt="Mia's smile is like sunshine!"
+        ></img>
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-3/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -26,9 +28,8 @@ export default function Page4({ language }) {
           {language === "es" && (
             <>
               <p className={styles.paragraph}>
-                Han pasado tantos días que Mia ahora cumplió 4 años de edad, y
-                crece a ser muy valiente y alegre. Un año completo del cicle del
-                sol y la luna ha pasado.
+                Un año completo del ciclo de día y noche, del baile del sol y la
+                luna, ha pasado. Son muchos días y Mia ahora cumplió 4 años.
               </p>
               <p className={styles.paragraph}>
                 Mia tuvo una celebración de cumpleaños junto a sus familiares y
@@ -38,17 +39,7 @@ export default function Page4({ language }) {
             </>
           )}
         </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={graphic}
-              alt="Mia's smile is like sunshine!"
-            ></img>
-          </div>
-        </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }

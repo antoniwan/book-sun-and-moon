@@ -1,14 +1,16 @@
-import PageWrapper from "../components/PageWrapper";
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-shadowplay.jpg";
+import graphic from "../graphics/shadow-play.avif";
 
 export default function Page6({ language }) {
   return (
-    <PageWrapper>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
-        <div className={` ${styles.textArea}`}>
+    <>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={graphic}
+          alt="Mia's smile is like sunshine!"
+        />
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-3/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -33,17 +35,7 @@ export default function Page6({ language }) {
             </>
           )}
         </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={graphic}
-              alt="Mia's smile is like sunshine!"
-            ></img>
-          </div>
-        </div>
       </div>
-    </PageWrapper>
+    </>
   );
 }
