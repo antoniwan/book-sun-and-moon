@@ -4,22 +4,22 @@ import graphic from "../graphics/page-1.avif";
 export default function Page1({ language }) {
   return (
     <>
-      <div className="columns-1 md:columns-2">
+      <div className="flex flex-col mb-36">
         <img
-          className="w-screen object-cover"
+          className="w-screen h-screen object-cover"
           src={graphic}
           alt="A 4-year-old girl with long, flowing brown hair, engaged in a playful moment with friends in a sunny playground, her smile radiant even as she becomes surrounded by softly blurred figures, illustrating the power of innocent joy amidst a backdrop of gentle shadow - she is playing in between shadows created by the trees and the playground"
         />
-        <div className={` ${styles.textArea}`}>
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
                 Every day, the sun says hi and shines so bright. The sun makes
-                Mia's brown eyes squint and sometimes smile.
+                Mia's brown eyes squint but always smile.
               </p>
               <p className={styles.paragraph}>
                 Off she goes, running to play in the park! Each new sun is a new
-                day of life. A new day of fun and a new day for smiles.
+                day of life, fun and smiles.
               </p>
             </>
           )}
@@ -33,8 +33,7 @@ export default function Page1({ language }) {
               </p>
               <p className={styles.paragraph}>
                 ¡Ahí se va corriendo a jugar al parque! Cada nuevo sol es un
-                nuevo día de vida. Un nuevo día de diversión y un nuevo día para
-                sonrisas nuevas.
+                nuevo día de vida, diversión y sonrisas nuevas.
               </p>
             </>
           )}
