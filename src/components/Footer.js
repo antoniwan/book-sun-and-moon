@@ -42,7 +42,7 @@ export default function Footer({
     <footer className="fixed bottom-0 left-0 right-0 p-2 bg-white">
       <nav className="flex items-center justify-between">
         <button
-          className={styles.button}
+          className="inline-flex justify-center items-center w-40 px-4 py-2 bg-stone-100300 text-stone-900 text-sm hover:text-white font-bold rounded-md hover:bg-stone-600 transition duration-300"
           onClick={() => switchLanguage(language)}
         >
           {language === "en" ? "English 🇺🇸" : "Español 🇵🇷"}
@@ -52,13 +52,6 @@ export default function Footer({
           <p className="text-sm font-semibold">
             {language === "en" ? "Page" : "Página"} {currentPage - 1}
           </p>
-        )}
-
-        {false && currentPage !== 1 && (
-          <button className={styles.button} onClick={() => goToFirstPage()}>
-            <SkipBack />
-            {language === "en" ? "First Page" : "Primera Página"}
-          </button>
         )}
 
         {currentPage !== 1 && (
@@ -83,7 +76,7 @@ export default function Footer({
         {currentPage === 11 && (
           <button className={styles.button} onClick={() => goToFirstPage()}>
             <SkipBack />
-            {language === "es" ? "Comenzar Nuevamente" : "Start Over"}
+            {language === "es" ? "Al principio" : "Start Over"}
           </button>
         )}
       </nav>
