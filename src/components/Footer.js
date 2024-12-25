@@ -1,11 +1,6 @@
 import { useLanguage } from "./LanguageContext";
 import styles from "./Footer.module.css";
-import {
-  SkipBack,
-  SkipForward,
-  ChevronLeft,
-  ChevronRight,
-} from "react-feather";
+import { SkipBack, ChevronLeft, ChevronRight } from "react-feather";
 
 export default function Footer({
   currentPage,
