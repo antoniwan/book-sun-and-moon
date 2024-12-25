@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./global-styles.css";
+import "./global-styles-output.css";
 import { LanguageProvider } from "./components/LanguageContext";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
