@@ -1,5 +1,5 @@
 import styles from "./ContentPage.module.css";
-import graphic from "../graphics/graphic-school.jpg";
+import graphic from "../graphics/school.avif";
 
 export default function Page3({ language }) {
   return (
@@ -10,7 +10,7 @@ export default function Page3({ language }) {
           src={graphic}
           alt="Mia's smile is like sunshine!"
         ></img>
-        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-2/4 p-8">
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -32,7 +32,7 @@ export default function Page3({ language }) {
               </p>
               <p className={styles.paragraph}>
                 Hoy hay escuela, y Mia se va a aprender y prosperar con su
-                maestra favorita, y unos amigos y compañeros.
+                maestra, y unos amigos y compañeros de clase.
               </p>
             </>
           )}
