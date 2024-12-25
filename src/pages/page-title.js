@@ -1,20 +1,17 @@
-import styles from "./TitlePage.module.css";
 import welcomeGraphic from "../graphics/page-1.avif";
 
 export default function TitlePage({ language }) {
   return (
     <div className="">
-      {language === "en" && (
-        <h2 className={styles.title}>Mia, the Sun, and the Moon</h2>
-      )}
+      <h2 className="fixed top-2 md:top-12 left-0 md:left-8 text-5xl md:text-8xl w-full p-5 drop-shadow-md text-stone-900">
+        {language === "en"
+          ? "Mia, the Sun, and the Moon"
+          : "Mia, el Sol, y la Luna"}
+      </h2>
 
-      {language === "es" && (
-        <h2 className={styles.title}>Mia, el Sol, y la Luna</h2>
-      )}
-
-      <div className={styles["graphic-wrapper"]}>
+      <div className="">
         <img
-          className={styles.graphic}
+          className="h-screen w-screen object-cover"
           src={welcomeGraphic}
           alt="Mia' is a happy and brave 4-year old girl who is dressed in a pink dress."
         ></img>
