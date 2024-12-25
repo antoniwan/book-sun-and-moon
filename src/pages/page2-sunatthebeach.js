@@ -4,10 +4,13 @@ import graphic from "../graphics/graphic-beach.jpg";
 export default function Page2({ language }) {
   return (
     <>
-      <div
-        className={`${styles.columnsWrapper} ${styles.columnWrapperReverse}`}
-      >
-        <div className={` ${styles.textArea}`}>
+      <div className="flex flex-col mb-36">
+        <img
+          className="w-screen h-screen object-cover"
+          src={graphic}
+          alt="A sandy beach with crystal clear waters meeting the ocean in the backdrop of a serene blue sky, accented by the soft glow of a sunny day, all framed by the distinctive contours of mountains in the distance. You can see a 4-year old playing in the sand, and her family is spotted near the girl."
+        ></img>
+        <div className="md:fixed bg-white/95 md:bottom-36 md:right-0 md:w-1/4 p-8">
           {language === "en" && (
             <>
               <p className={styles.paragraph}>
@@ -35,16 +38,6 @@ export default function Page2({ language }) {
               </p>
             </>
           )}
-        </div>
-
-        <div className={` ${styles.graphicColumn}`}>
-          <div className={styles["graphic-wrapper"]}>
-            <img
-              className={styles.graphic}
-              src={graphic}
-              alt="A sandy beach with crystal clear waters meeting the ocean in the backdrop of a serene blue sky, accented by the soft glow of a sunny day, all framed by the distinctive contours of mountains in the distance. You can see a 4-year old playing in the sand, and her family is spotted near the girl."
-            ></img>
-          </div>
         </div>
       </div>
     </>

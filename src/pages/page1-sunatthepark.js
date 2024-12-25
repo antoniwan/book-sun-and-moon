@@ -33,7 +33,7 @@ export default function Page1({ language }) {
               </p>
               <p className={styles.paragraph}>
                 ¡Ahí se va corriendo a jugar al parque! Cada nuevo sol es un
-                nuevo día de vida, diversión y sonrisas nuevas.
+                nuevo día de vida, diversión y sonrisas.
               </p>
             </>
           )}
