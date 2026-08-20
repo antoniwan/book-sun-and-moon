@@ -61,6 +61,18 @@ button {
   border: 0;
 }
 
+.page-art {
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (min-width: 1024px) {
+  .page-art {
+    object-fit: cover;
+    object-position: var(--art-position, center);
+  }
+}
+
 .starfield span {
   position: absolute;
   display: block;

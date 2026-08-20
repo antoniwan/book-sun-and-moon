@@ -63,15 +63,19 @@ function Book() {
           book.isCover ? "" : "lg:flex-row"
         }`}
       >
-        <div className="relative h-full min-h-0 flex-1 overflow-hidden bg-dusk">
+        <div
+          className={`relative h-full min-h-0 flex-1 overflow-hidden ${
+            book.isCover ? "bg-paper" : "bg-dusk"
+          }`}
+        >
           <img
             key={book.page.id}
             src={book.page.image}
             alt={book.page.alt[language]}
-            className="page-art animate-pageIn absolute inset-0 h-full w-full object-cover"
+            className="page-art animate-pageIn absolute inset-0 h-full w-full"
             style={{
               "--page-delta": book.direction > 0 ? "18px" : "-18px",
-              objectPosition: book.page.objectPosition || "center",
+              "--art-position": book.page.objectPosition || "center",
             }}
           />
           <div
