@@ -17,7 +17,7 @@ function IconButton({ label, onClick, disabled, children }) {
       title={label}
       disabled={disabled}
       onClick={onClick}
-      className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-pink-500 text-white shadow-sm transition hover:bg-pink-600 disabled:cursor-not-allowed disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-300"
+      className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-ember text-paper shadow-sm transition hover:bg-ink disabled:cursor-not-allowed disabled:opacity-35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ember"
     >
       {children}
     </button>
@@ -63,7 +63,7 @@ export default function ReaderBar({
         };
 
   return (
-    <footer className="reader-bar z-30 border-t border-black/10 bg-cream/95 px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] text-ink backdrop-blur-md md:px-5">
+    <footer className="reader-bar z-30 border-t border-ink/10 bg-paper/95 px-3 py-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] text-ink backdrop-blur-md md:px-5">
       <div className="mx-auto flex max-w-5xl flex-col gap-2">
         <nav className="flex items-center justify-between gap-2" aria-label={copy.page}>
           <div className="flex items-center gap-1.5">
@@ -89,7 +89,7 @@ export default function ReaderBar({
                       aria-current={active ? "page" : undefined}
                       onClick={() => goTo(pageIndex)}
                       className={`block h-2.5 rounded-full transition ${
-                        active ? "w-5 bg-pink-500" : "w-2.5 bg-ink/25 hover:bg-pink-400"
+                        active ? "w-5 bg-ember" : "w-2.5 bg-ink/25 hover:bg-ember/70"
                       }`}
                     />
                   </li>
@@ -103,7 +103,7 @@ export default function ReaderBar({
               <button
                 type="button"
                 onClick={goFirst}
-                className="rounded-full bg-pink-500 px-4 py-2 text-sm font-bold text-white transition hover:bg-pink-600"
+                className="rounded-full bg-ember px-4 py-2 text-sm font-bold text-paper transition hover:bg-ink"
               >
                 {copy.again}
               </button>

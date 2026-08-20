@@ -1,14 +1,14 @@
-import coverArt from "../graphics/title-image.avif";
-import parkArt from "../graphics/park-play.avif";
-import beachArt from "../graphics/beach-play-2.avif";
-import schoolArt from "../graphics/school.avif";
-import birthdayArt from "../graphics/birthday.avif";
-import sunArt from "../graphics/sun.avif";
-import shadowArt from "../graphics/shadow-play.avif";
-import duskArt from "../graphics/song-night.avif";
-import starArt from "../graphics/colorful-sky.avif";
-import moonArt from "../graphics/more-night-sky.avif";
-import bedtimeArt from "../graphics/night-moon-girl.avif";
+import coverArt from "../graphics/title-image.png";
+import parkArt from "../graphics/park-play.png";
+import beachArt from "../graphics/beach-play-2.png";
+import schoolArt from "../graphics/school.png";
+import birthdayArt from "../graphics/birthday.png";
+import sunArt from "../graphics/sun.png";
+import shadowArt from "../graphics/shadow-play.png";
+import duskArt from "../graphics/song-night.png";
+import starArt from "../graphics/colorful-sky.png";
+import moonArt from "../graphics/more-night-sky.png";
+import bedtimeArt from "../graphics/night-moon-girl.png";
 
 export const BOOK = {
   author: {
@@ -63,9 +63,10 @@ export const PAGES = [
     type: "cover",
     theme: "dawn",
     image: coverArt,
+    objectPosition: "center 72%",
     alt: {
-      en: "A young girl with long brown hair and a pale dress stands in a meadow of yellow flowers at sunset, looking toward the glowing sun.",
-      es: "Una niña de cabello castaño largo y un vestido claro está en un prado de flores amarillas al atardecer, mirando hacia el sol.",
+      en: "A girl in a red coat with braided hair stands in a dark field at dusk, looking toward an orange sun on the horizon while a pale moon hangs in the sky.",
+      es: "Una niña con un abrigo rojo y el cabello trenzado está de pie en un campo oscuro al anochecer, mirando hacia un sol naranja en el horizonte mientras una luna pálida cuelga en el cielo.",
     },
   },
   {
@@ -73,18 +74,19 @@ export const PAGES = [
     type: "story",
     theme: "day",
     image: parkArt,
+    objectPosition: "center 78%",
     alt: {
-      en: "Mia, a smiling girl with long brown hair and a golden jumper, runs through a sunny park while other children play behind her.",
-      es: "Mia, una niña sonriente de cabello castaño largo y una jardinera dorada, corre por un parque soleado mientras otros niños juegan detrás de ella.",
+      en: "Mia, a girl with pigtails, hops across a sunny park lawn while other children play among the trees.",
+      es: "Mia, una niña con trenzas, salta por el césped de un parque soleado mientras otros niños juegan entre los árboles.",
     },
     body: {
       en: [
-        "Every day, the sun says hi and shines so bright. The sun makes Mia's brown eyes squint — but she always smiles.",
-        "Off she goes, running to play in the park! Each new sun is a new day of life, fun, and smiles.",
+        "Every day, the sun says hi and shines so bright. Mia squints — then she smiles.",
+        "Off she goes, running to play in the park!",
       ],
       es: [
-        "Cada día, el Sol dice hola y brilla con mucha calidez. El sol a veces hace que los ojos marrones de Mia se encojan un poquito, pero siempre la hace sonreír.",
-        "¡Ahí se va corriendo a jugar al parque! Cada nuevo sol es un nuevo día de vida, diversión y sonrisas.",
+        "Cada día, el Sol dice hola y brilla con mucha calidez. Mia entrecierra los ojitos… y sonríe.",
+        "¡Ahí se va corriendo a jugar al parque!",
       ],
     },
   },
@@ -93,18 +95,19 @@ export const PAGES = [
     type: "story",
     theme: "day",
     image: beachArt,
+    objectPosition: "center 82%",
     alt: {
-      en: "A woman and two small children walk along a golden beach toward turquoise water, with green mountains and tall clouds in the distance.",
-      es: "Una mujer y dos niños pequeños caminan por una playa dorada hacia un mar turquesa, con montañas verdes y nubes altas a lo lejos.",
+      en: "Two children in red sit on a sandy beach by the ocean, playing in the surf with mountains and tall clouds behind them.",
+      es: "Dos niños de rojo están sentados en una playa de arena junto al mar, jugando en las olas con montañas y nubes altas detrás.",
     },
     body: {
       en: [
-        "Every day, the sun says hi and shines so warmly. The sun makes Mia's skin warm.",
-        "Today is different. She won't go to the park — she'll go to the beach instead, and play in the sand. This day is extra special because her cousin Dario joins in the fun.",
+        "Today the sun feels extra warm on Mia's skin.",
+        "No park today — it's the beach, and sand, and waves. And the very best part: her cousin Dario is here too!",
       ],
       es: [
-        "Cada día, el Sol dice hola y brilla con mucha calidez. El sol hace que la piel de Mia se ponga calentita.",
-        "Hoy es un día diferente: Mia no va al parque porque se va para la playa a jugar en la arena. El día también es especial, pues su primo Dario la acompaña en la diversión.",
+        "Hoy el sol se siente extra calentito en la piel de Mia.",
+        "Hoy no hay parque: hay playa, arena y olas. Y lo mejor de todo: ¡su primo Dario también está aquí!",
       ],
     },
   },
@@ -113,18 +116,17 @@ export const PAGES = [
     type: "story",
     theme: "day",
     image: schoolArt,
+    objectPosition: "center 78%",
     alt: {
-      en: "Mia sits in a sunlit forest with her teacher and two friends, gathered in a circle to learn and play.",
-      es: "Mia está sentada en un bosque lleno de sol con su maestra y dos amigos, reunidos en un círculo para aprender y jugar.",
+      en: "Four children sit together under a large tree, looking at an open book on the grass.",
+      es: "Cuatro niños están sentados juntos bajo un árbol grande, mirando un libro abierto en el césped.",
     },
     body: {
       en: [
-        "It's another day, and the sun says hi again. Mia notices that the sun will always be there for her.",
-        "Today is a school day, and Mia is off to learn and grow with her favorite teacher and friends.",
+        "Today is a school day. Mia sits with her teacher and friends, and the sun sits with them too — in the leaves, on the book, on their faces.",
       ],
       es: [
-        "Hoy es otro día, y el sol dice hola y brilla nuevamente. Mia se da cuenta de que el sol siempre estará ahí para ella durante el día.",
-        "Hoy hay escuela, y Mia se va a aprender y crecer con su maestra, y unos amigos y compañeros de clase.",
+        "Hoy hay escuela. Mia se sienta con su maestra y sus amigos, y el sol se sienta con ellos también: en las hojas, en el libro, en sus caritas.",
       ],
     },
   },
@@ -133,18 +135,19 @@ export const PAGES = [
     type: "story",
     theme: "party",
     image: birthdayArt,
+    objectPosition: "center 55%",
     alt: {
-      en: "Mia in a pink polka-dot dress smiles beside a birthday cake with candles, surrounded by friends, balloons, and confetti.",
-      es: "Mia, con un vestido rosado de lunares, sonríe junto a un bizcocho de cumpleaños con velas, rodeada de amistades, globos y confeti.",
+      en: "Mia in an orange dress stands in a bright doorway while family and friends gather around a birthday cake in a dark room.",
+      es: "Mia, con un vestido naranja, está de pie en un umbral iluminado mientras familiares y amigos se reúnen alrededor de un bizcocho de cumpleaños en una habitación oscura.",
     },
     body: {
       en: [
-        "So many days have passed that Mia is now four years old, growing up brave and joyful. A whole year of the sun and her moon has gone by.",
-        "Mia celebrated her birthday with family and friends — a new year of life. And the cake was very yummy.",
+        "So many suns and moons have come and gone that Mia is four years old!",
+        "She celebrated with family and friends. And the cake was very yummy.",
       ],
       es: [
-        "Un año completo del ciclo de día y noche, del baile del sol y la luna, ha pasado. Son muchos días, y Mia ahora cumplió 4 años.",
-        "Mia tuvo una celebración de cumpleaños junto a sus familiares y amigos para apreciar un nuevo año de vida. El bizcocho estaba muy delicioso.",
+        "¡Han pasado tantos soles y tantas lunas que Mia ya tiene cuatro años!",
+        "Celebró con su familia y sus amigos. Y el bizcocho estaba muy delicioso.",
       ],
     },
   },
@@ -153,17 +156,18 @@ export const PAGES = [
     type: "story",
     theme: "day",
     image: sunArt,
+    objectPosition: "center 62%",
     alt: {
-      en: "A bright, warm sun fills the sky with golden light.",
-      es: "Un sol brillante y cálido llena el cielo de luz dorada.",
+      en: "A girl in a red dress with a long braid stands in a golden field under a blue sky, face tilted up toward the sun with a smile.",
+      es: "Una niña con un vestido rojo y una trenza larga está de pie en un campo dorado bajo un cielo azul, con el rostro alzado hacia el sol y una sonrisa.",
     },
     body: {
       en: [
-        "As another day goes by, whenever Mia feels the sunshine on her skin, her smile shines. She looks up into the sky with a big, bright smile and calls out,",
+        "Whenever the sunshine touches her skin, Mia looks up and calls out,",
         { quote: "Hi, Sun! Thank you for the warmth and the light. So fun!" },
       ],
       es: [
-        "Hoy es otro día nuevo, y cuando Mia siente la luz del sol en su piel, su sonrisa brilla y grita:",
+        "Cuando el sol le toca la piel, Mia mira hacia arriba y grita:",
         { quote: "¡Hola, Sol! ¡Gracias por el calorcito y por la luz! ¡Qué diversión!" },
       ],
     },
@@ -173,20 +177,21 @@ export const PAGES = [
     type: "story",
     theme: "dusk",
     image: shadowArt,
+    objectPosition: "center 42%",
     alt: {
-      en: "Three children play on a tree-lined path at sunset, their long shadows stretching across the ground.",
-      es: "Tres niños juegan en un camino rodeado de árboles al atardecer, con sus sombras alargadas sobre el suelo.",
+      en: "Three children play on a path through reddish trees, their long purple shadows stretching across the sunlit ground.",
+      es: "Tres niños juegan en un camino entre árboles rojizos, con sus sombras moradas alargadas sobre el suelo iluminado.",
     },
     body: {
       en: [
-        "As the hours of each day go by, the sun moves across the sky and makes many shadows for our brave and joyful girl and her friends to play in.",
+        "The sun moves across the sky and stretches long shadows for Mia and her friends to play in.",
         { quote: "The sun also plays with us!" },
-        "Mia explains excitedly.",
+        "Mia explains, very excited.",
       ],
       es: [
-        "Las horas de cada día pasan, y el sol a su vez va pasando y moviéndose, creando muchas sombras para que nuestra niña valiente y alegre y sus amigos disfruten. Ellos inventan juegos con las sombras y su oscuridad.",
-        { quote: "El sol también quiere jugar con nosotros." },
-        "Mia le explica a sus amigos.",
+        "El sol se mueve por el cielo y estira sombras largas para que Mia y sus amigos jueguen.",
+        { quote: "¡El sol también quiere jugar con nosotros!" },
+        "explica Mia, muy emocionada.",
       ],
     },
   },
@@ -195,9 +200,10 @@ export const PAGES = [
     type: "story",
     theme: "dusk",
     image: duskArt,
+    objectPosition: "center 70%",
     alt: {
-      en: "Mia sits close to a loved one by a quiet river at dusk, watching the last light of day and the first stars.",
-      es: "Mia está sentada cerca de un ser querido junto a un río quieto al anochecer, mirando la última luz del día y las primeras estrellas.",
+      en: "Two figures in red sit by the water as the sky splits between an orange sunset and a blue night with a moon.",
+      es: "Dos figuras de rojo están sentadas junto al agua mientras el cielo se divide entre un atardecer naranja y una noche azul con luna.",
     },
     body: {
       en: [
@@ -217,9 +223,10 @@ export const PAGES = [
     type: "story",
     theme: "night",
     image: starArt,
+    objectPosition: "center 88%",
     alt: {
-      en: "A vast night sky filled with colorful stars, clouds, and a glowing horizon over distant mountains.",
-      es: "Un cielo nocturno inmenso, lleno de estrellas de colores, nubes y un horizonte brillante sobre montañas lejanas.",
+      en: "A small figure points up at a vast dark blue night sky filled with stars, above a thin orange horizon.",
+      es: "Una figura pequeña señala un cielo nocturno azul oscuro lleno de estrellas, sobre un horizonte naranja delgado.",
     },
     body: {
       en: [
@@ -235,23 +242,25 @@ export const PAGES = [
     type: "story",
     theme: "night",
     image: moonArt,
-    captionSize: "wide",
+    objectPosition: "center 62%",
     alt: {
-      en: "A child stands by a still lake at twilight, looking up at an enormous golden moon.",
-      es: "Un niño está de pie junto a un lago quieto al crepúsculo, mirando una luna dorada enorme.",
+      en: "A girl in a red coat stands by the water looking up at a row of moon phases across the night sky, with two smaller figures beside her.",
+      es: "Una niña con un abrigo rojo está de pie junto al agua, mirando una fila de fases lunares en el cielo nocturno, con dos figuras más pequeñas a su lado.",
     },
     body: {
       en: [
-        "Mia thinks the moon has many faces, because it looks different every night. What a curious girl!",
-        "Mia's parents explain that the moon is a little like us. We have many sides, too. We are family, friends, and workers. Sometimes we are sick, and sometimes we are happy. Sometimes we hide or play in the shadows; sometimes we bask in the sun. Sometimes we are parents; sometimes we are daughters and sons. Sometimes we are awake, and other times we are asleep. Sometimes we are there, and sometimes we must go away.",
-        "We always have many different sides and phases. Just like the moon, our lives are ever-changing.",
-        "Mia giggles, finding some kind of humor in this explanation.",
+        "Mia thinks the moon has many faces, because it looks different every night.",
+        "Sometimes it's a sliver. Sometimes it's round and bright. Sometimes it almost hides.",
+        { quote: "The moon is a little like us," },
+        "says Mama. Some days we shine. Some days we feel small. Some days we hide.",
+        "Mia giggles. She likes that the moon can change — and so can she.",
       ],
       es: [
-        "Mia piensa que la luna tiene muchas caras porque se ve diferente cada noche. ¡Qué curiosidad!",
-        "Los padres de Mia le explican que la luna es similar a nosotros: las personas también tenemos muchos lados y dimensiones. Somos familia, amigos, trabajadores. Algunos estamos durmiendo, mientras otros andan despiertos. A veces nos enfermamos; a veces estamos felices. A veces nos escondemos y jugamos en las sombras, y a veces nos recostamos a alimentarnos de la luz del sol. A veces somos padres, y a veces solo somos hijos e hijas. A veces estamos, y en otras ocasiones no podemos estar del todo.",
-        "Todos tenemos diferentes lados y fases, diferentes momentos. Como la luna, nuestras vidas son cambio constante.",
-        "A Mia esta reflexión le produce unas carcajadas; al parecer recordó o creó algún tipo de humor.",
+        "Mia piensa que la luna tiene muchas caras, porque se ve diferente cada noche.",
+        "A veces es una rayita. A veces está redonda y brillante. A veces casi se esconde.",
+        { quote: "La luna se parece un poquito a nosotros," },
+        "dice Mamá. Hay días en que brillamos. Hay días en que nos sentimos chiquitos. Hay días en que nos escondemos.",
+        "Mia se ríe. Le gusta que la luna pueda cambiar — y ella también.",
       ],
     },
   },
@@ -260,9 +269,10 @@ export const PAGES = [
     type: "ending",
     theme: "night",
     image: bedtimeArt,
+    objectPosition: "center 70%",
     alt: {
-      en: "Mia sits up in bed holding a stuffed animal, with a round moon shining through her bedroom window.",
-      es: "Mia está sentada en la cama abrazando un peluche, con una luna redonda brillando a través de la ventana de su cuarto.",
+      en: "A child in orange sits on a bed in a dark bedroom, holding a stuffed animal, with a round moon shining through the window.",
+      es: "Un niño de naranja está sentado en la cama de un cuarto oscuro, abrazando un peluche, con una luna redonda brillando a través de la ventana.",
     },
     body: {
       en: [

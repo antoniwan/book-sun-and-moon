@@ -26,8 +26,8 @@ export default function LanguageToggle({
             className={`rounded-full px-3 py-1 text-xs font-bold tracking-wide transition ${
               active
                 ? tone === "dark"
-                  ? "bg-cream text-ink shadow-sm"
-                  : "bg-ink text-cream shadow-sm"
+                  ? "bg-paper text-ink shadow-sm"
+                  : "bg-ink text-paper shadow-sm"
                 : "text-current opacity-80 hover:opacity-100"
             }`}
           >

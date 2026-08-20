@@ -7,8 +7,8 @@ Published at [https://book-sun-and-moon.vercel.app](https://book-sun-and-moon.ve
 ## Read it
 
 ```bash
-npm install
-npm start
+pnpm install
+pnpm start
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
@@ -17,10 +17,10 @@ Then open [http://localhost:3000](http://localhost:3000).
 - Tap the edges of the illustration to go forward or back
 - Switch language any time with **EN / ES**
 - Use **Read aloud** to hear the page
-- Deep-link a page with `#/3`
+- Each page has its own URL, such as `/1/park` or `/10/bedtime`
 
 ## Build
 
 ```bash
-npm run build
+pnpm run build
 ```

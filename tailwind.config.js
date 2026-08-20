@@ -1,23 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx}", "./public/index.html"],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        ink: "#3d2c29",
-        cream: "#fff8f0",
-        blush: "#ffd6dc",
-        sun: "#e09f3e",
-        dusk: "#1b1b3a",
-        moonlight: "#efeaf8",
+        ink: "#2a221c",
+        paper: "#f3ead8",
+        cream: "#f3ead8",
+        ember: "#c4452f",
+        blush: "#e8b4a0",
+        sun: "#d4923a",
+        dusk: "#1c2740",
+        moonlight: "#efe6d6",
       },
       fontFamily: {
-        display: ['"Satisfy"', "cursive"],
-        story: ['"Quicksand"', "system-ui", "sans-serif"],
+        display: ['"Fraunces"', "Iowan Old Style", "Palatino", "serif"],
+        story: ['"Source Serif 4"', "Iowan Old Style", "Palatino", "serif"],
       },
       boxShadow: {
-        page: "0 18px 50px rgba(61, 44, 41, 0.22)",
-        glow: "0 0 40px rgba(224, 159, 62, 0.35)",
+        page: "0 18px 50px rgba(42, 34, 28, 0.22)",
+        glow: "0 0 40px rgba(212, 146, 58, 0.35)",
       },
       keyframes: {
         kenburns: {

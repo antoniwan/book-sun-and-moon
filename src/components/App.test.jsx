@@ -1,23 +1,31 @@
 import { render, screen, fireEvent } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import App from "./App";
+
+function renderApp(path = "/") {
+  return render(
+    <MemoryRouter initialEntries={[path]}>
+      <App />
+    </MemoryRouter>
+  );
+}
 
 beforeEach(() => {
   window.localStorage.clear();
-  window.history.replaceState(null, "", "/");
   window.speechSynthesis = {
-    speak: jest.fn(),
-    cancel: jest.fn(),
-    pause: jest.fn(),
-    resume: jest.fn(),
-    getVoices: jest.fn(() => []),
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
+    speak: vi.fn(),
+    cancel: vi.fn(),
+    pause: vi.fn(),
+    resume: vi.fn(),
+    getVoices: vi.fn(() => []),
+    addEventListener: vi.fn(),
+    removeEventListener: vi.fn(),
     speaking: false,
   };
 });
 
 test("renders the cover title", () => {
-  render(<App />);
+  renderApp();
   expect(
     screen.getByRole("heading", { name: /Mia, the Sun, and the Moon/i })
   ).toBeInTheDocument();
@@ -26,7 +34,7 @@ test("renders the cover title", () => {
 });
 
 test("opens the first story page", () => {
-  render(<App />);
+  renderApp();
   fireEvent.click(screen.getByRole("button", { name: /Open the book/i }));
   expect(
     screen.getByText(/Every day, the sun says hi and shines so bright/i)
@@ -34,8 +42,20 @@ test("opens the first story page", () => {
   expect(screen.getByRole("navigation", { name: /Page 1 of 10/i })).toBeInTheDocument();
 });
 
+test("canonicalizes a slug-only story path", () => {
+  renderApp("/park");
+  expect(
+    screen.getByText(/Every day, the sun says hi and shines so bright/i)
+  ).toBeInTheDocument();
+});
+
+test("opens a story page from its numbered path", () => {
+  renderApp("/1/park");
+  expect(screen.getByRole("navigation", { name: /Page 1 of 10/i })).toBeInTheDocument();
+});
+
 test("switches the cover into Spanish", () => {
-  render(<App />);
+  renderApp();
   fireEvent.click(screen.getByRole("button", { name: /Español/i }));
   expect(
     screen.getByRole("heading", { name: /Mia, el Sol y la Luna/i })

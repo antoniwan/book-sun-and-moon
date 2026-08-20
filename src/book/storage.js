@@ -70,24 +70,3 @@ export function saveLanguage(language) {
   if (!canUseStorage()) return;
   window.localStorage.setItem(LANGUAGE_KEY, language);
 }
-
-export function pageFromHash(pageCount) {
-  if (typeof window === "undefined") return null;
-  const hash = window.location.hash;
-  if (!hash || hash === "#" || hash === "#/") return null;
-  const raw = hash.replace(/^#\/?/, "");
-  if (raw === "cover") return 0;
-  const value = Number(raw);
-  if (Number.isInteger(value) && value >= 0 && value < pageCount) {
-    return value;
-  }
-  return null;
-}
-
-export function writeHash(index) {
-  if (typeof window === "undefined") return;
-  const next = index === 0 ? "#/" : `#/${index}`;
-  if (window.location.hash !== next) {
-    window.history.replaceState(null, "", next);
-  }
-}

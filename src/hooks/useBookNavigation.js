@@ -1,59 +1,68 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { LAST_STORY_INDEX, PAGES } from "../book/content";
-import { pageFromHash, savePage, writeHash } from "../book/storage";
+import { indexFromPathname, pathForIndex, pathFromLegacyHash } from "../book/paths";
+import { savePage } from "../book/storage";
 
 export function useBookNavigation() {
-  const [index, setIndex] = useState(() => pageFromHash(PAGES.length) ?? 0);
+  const navigate = useNavigate();
+  const location = useLocation();
   const [direction, setDirection] = useState(1);
-  const indexRef = useRef(index);
-  indexRef.current = index;
+  const index = indexFromPathname(location.pathname);
+  const resolvedIndex = index ?? 0;
+  const indexRef = useRef(resolvedIndex);
+  indexRef.current = resolvedIndex;
 
-  const goTo = useCallback((nextIndex, nextDirection) => {
-    const current = indexRef.current;
-    const clamped = Math.min(Math.max(nextIndex, 0), LAST_STORY_INDEX);
-    setDirection(nextDirection ?? (clamped >= current ? 1 : -1));
-    setIndex(clamped);
-  }, []);
+  const goTo = useCallback(
+    (nextIndex, nextDirection) => {
+      const current = indexRef.current;
+      const clamped = Math.min(Math.max(nextIndex, 0), LAST_STORY_INDEX);
+      setDirection(nextDirection ?? (clamped >= current ? 1 : -1));
+      savePage(clamped);
+      navigate(pathForIndex(clamped));
+    },
+    [navigate]
+  );
 
-  const goNext = useCallback(() => goTo(index + 1, 1), [goTo, index]);
-  const goPrev = useCallback(() => goTo(index - 1, -1), [goTo, index]);
+  const goNext = useCallback(() => goTo(resolvedIndex + 1, 1), [goTo, resolvedIndex]);
+  const goPrev = useCallback(() => goTo(resolvedIndex - 1, -1), [goTo, resolvedIndex]);
   const goFirst = useCallback(() => goTo(0, -1), [goTo]);
   const goLast = useCallback(() => goTo(LAST_STORY_INDEX, 1), [goTo]);
 
   useEffect(() => {
+    if (!location.hash) return undefined;
+    const migrated = pathFromLegacyHash(location.hash);
+    if (migrated) {
+      navigate({ pathname: migrated, hash: "" }, { replace: true });
+    }
+    return undefined;
+  }, [location.hash, navigate]);
+
+  useEffect(() => {
+    if (index === null) return;
     savePage(index);
-    writeHash(index);
   }, [index]);
 
   useEffect(() => {
-    const onHashChange = () => {
-      const fromHash = pageFromHash(PAGES.length);
-      if (fromHash !== null) {
-        setIndex(fromHash);
-      }
-    };
-    window.addEventListener("hashchange", onHashChange);
-    return () => window.removeEventListener("hashchange", onHashChange);
-  }, []);
-
-  useEffect(() => {
-    const nextPage = PAGES[index + 1];
-    if (!nextPage || process.env.NODE_ENV === "test") return undefined;
+    const nextPage = PAGES[resolvedIndex + 1];
+    if (!nextPage || import.meta.env.MODE === "test") return undefined;
     const preload = new Image();
     preload.src = nextPage.image;
     return () => {
       preload.src = "";
     };
-  }, [index]);
+  }, [resolvedIndex]);
 
   return {
-    index,
-    page: PAGES[index],
+    index: resolvedIndex,
+    page: PAGES[resolvedIndex],
     direction,
-    isCover: index === 0,
-    isLast: index === LAST_STORY_INDEX,
+    isCover: resolvedIndex === 0,
+    isLast: resolvedIndex === LAST_STORY_INDEX,
     pageCount: LAST_STORY_INDEX,
-    storyNumber: index,
+    storyNumber: resolvedIndex,
+    invalidPath: index === null,
+    canonicalPath: index === null ? "/" : pathForIndex(index),
     goTo,
     goNext,
     goPrev,
