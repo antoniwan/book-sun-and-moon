@@ -68,35 +68,38 @@ function Book() {
             book.isCover ? "bg-paper" : "bg-dusk"
           }`}
         >
-          <img
-            key={book.page.id}
-            src={book.page.image}
-            alt={book.page.alt[language]}
-            className="page-art animate-pageIn absolute inset-0 h-full w-full"
-            style={{
-              "--page-delta": book.direction > 0 ? "18px" : "-18px",
-              "--art-position": book.page.objectPosition || "center",
-            }}
-          />
-          <div
-            key={`${book.page.id}-copy`}
-            className="animate-pageIn absolute inset-0"
-            style={{ "--page-delta": book.direction > 0 ? "18px" : "-18px" }}
-          >
-            {book.isCover && (
-              <CoverPage
-                page={book.page}
-                language={language}
-                onStart={() => book.goTo(1, 1)}
-                onContinue={() => book.goTo(resumeIndex || 1, 1)}
-                showContinue={resumeIndex > 1}
-                onLanguageChange={setLanguage}
+          {book.isCover ? (
+            <CoverPage
+              page={book.page}
+              language={language}
+              onStart={() => book.goTo(1, 1)}
+              onContinue={() => book.goTo(resumeIndex || 1, 1)}
+              showContinue={resumeIndex > 1}
+              onLanguageChange={setLanguage}
+            >
+              <img
+                key={book.page.id}
+                src={book.page.image}
+                alt={book.page.alt[language]}
+                className="page-art animate-pageIn absolute inset-0 h-full w-full"
+                style={{
+                  "--page-delta": book.direction > 0 ? "18px" : "-18px",
+                  "--art-position": book.page.objectPosition || "center",
+                }}
               />
-            )}
-          </div>
-
-          {!book.isCover && (
+            </CoverPage>
+          ) : (
             <>
+              <img
+                key={book.page.id}
+                src={book.page.image}
+                alt={book.page.alt[language]}
+                className="page-art animate-pageIn absolute inset-0 h-full w-full"
+                style={{
+                  "--page-delta": book.direction > 0 ? "18px" : "-18px",
+                  "--art-position": book.page.objectPosition || "center",
+                }}
+              />
               <button
                 type="button"
                 className="hotspot absolute inset-y-0 left-0 z-[5] w-[18%] bg-transparent"
