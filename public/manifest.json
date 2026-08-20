@@ -1,6 +1,10 @@
 {
   "short_name": "Mia",
   "name": "Mia, the Sun, and the Moon",
+  "description": "Children's e-book in English and Spanish. Mia, the Sun, and the Moon / Mia, el Sol y la Luna.",
+  "lang": "en",
+  "dir": "ltr",
+  "id": "https://book-sun-and-moon.vercel.app/",
   "icons": [
     {
       "src": "favicon.ico",

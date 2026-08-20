@@ -34,6 +34,29 @@ export const BOOK = {
   portfolioUrl: "https://antonio.builds.software",
 };
 
+export const SITE_URL = "https://book-sun-and-moon.vercel.app";
+export const SITE_IMAGE = `${SITE_URL}/share-image.png`;
+
+export const SEO = {
+  defaultTitle: "Mia, the Sun, and the Moon | Mia, el Sol y la Luna",
+  title: {
+    en: "Mia, the Sun, and the Moon | Antonio Rodriguez Martinez",
+    es: "Mia, el Sol y la Luna | Antonio Rodríguez Martínez",
+  },
+  description: {
+    en: "Children's e-book in English and Spanish by Antonio Rodriguez Martinez. Mia, the Sun, and the Moon / Mia, el Sol y la Luna.",
+    es: "Libro infantil en inglés y español de Antonio Rodríguez Martínez. Mia, el Sol y la Luna / Mia, the Sun, and the Moon.",
+  },
+  locale: {
+    en: "en_US",
+    es: "es_419",
+  },
+  imageAlt: {
+    en: "Cover illustration for Mia, the Sun, and the Moon",
+    es: "Ilustración de portada de Mia, el Sol y la Luna",
+  },
+};
+
 export const PAGES = [
   {
     id: "cover",

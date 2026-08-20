@@ -22,6 +22,7 @@ test("renders the cover title", () => {
     screen.getByRole("heading", { name: /Mia, the Sun, and the Moon/i })
   ).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /Open the book/i })).toBeInTheDocument();
+  expect(document.title).toMatch(/Mia, the Sun, and the Moon/i);
 });
 
 test("opens the first story page", () => {

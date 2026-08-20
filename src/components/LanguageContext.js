@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { applyDocumentMeta } from "../book/documentMeta";
 import { readSavedLanguage, saveLanguage } from "../book/storage";
 
 const LanguageContext = createContext(null);
@@ -16,8 +17,8 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     saveLanguage(language);
-    document.documentElement.lang = language === "es" ? "es" : "en";
     document.documentElement.dir = "ltr";
+    applyDocumentMeta(language);
   }, [language]);
 
   const value = useMemo(

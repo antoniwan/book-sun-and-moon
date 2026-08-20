@@ -1,8 +1,8 @@
 # Mia, the Sun, and the Moon
 
-A story by Antonio Rodriguez Martinez, written for his daughter Mia and nephew Dario.
+Children's e-book in English and Spanish by Antonio Rodriguez Martinez. Spanish title: Mia, el Sol y la Luna.
 
-English and Spanish. Sunlight, moonlight, birthdays, shadows, and the many sides we all have — just like the moon.
+Published at [https://book-sun-and-moon.vercel.app](https://book-sun-and-moon.vercel.app).
 
 ## Read it
 
