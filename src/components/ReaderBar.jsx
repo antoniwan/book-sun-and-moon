@@ -75,7 +75,7 @@ export default function ReaderBar({
             </IconButton>
           </div>
 
-          <div className="flex min-w-0 flex-1 flex-col items-center px-2">
+          <div className="hidden min-w-0 flex-1 flex-col items-center px-2 md:flex">
             <p className="text-xs font-bold uppercase tracking-wide text-ink/70">{copy.page}</p>
             <ol className="mt-1 flex flex-wrap items-center justify-center gap-1">
               {Array.from({ length: pageCount }, (_, i) => {
