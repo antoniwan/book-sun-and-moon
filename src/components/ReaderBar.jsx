@@ -75,9 +75,9 @@ export default function ReaderBar({
             </IconButton>
           </div>
 
-          <div className="hidden min-w-0 flex-1 flex-col items-center px-2 md:flex">
+          <div className="flex min-w-0 flex-1 flex-col items-center px-2">
             <p className="text-xs font-bold uppercase tracking-wide text-ink/70">{copy.page}</p>
-            <ol className="mt-1 flex flex-wrap items-center justify-center gap-1">
+            <ol className="mt-1 hidden flex-wrap items-center justify-center gap-1 md:flex">
               {Array.from({ length: pageCount }, (_, i) => {
                 const pageIndex = i + 1;
                 const active = pageIndex === storyNumber;
