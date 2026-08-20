@@ -1,5 +1,7 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
+import { version } from "../../package.json";
+import { REPO_URL } from "../book/content";
 import App from "./App";
 
 function renderApp(path = "/") {
@@ -31,6 +33,10 @@ test("renders the cover title", () => {
   ).toBeInTheDocument();
   expect(screen.getByRole("button", { name: /Open the book/i })).toBeInTheDocument();
   expect(document.title).toMatch(/Mia, the Sun, and the Moon/i);
+  expect(screen.getByRole("link", { name: `v${version}` })).toHaveAttribute(
+    "href",
+    REPO_URL
+  );
 });
 
 test("opens the first story page", () => {

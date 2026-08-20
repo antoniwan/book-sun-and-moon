@@ -10,6 +10,7 @@ import Header from "./Header";
 import { LanguageProvider, useLanguage } from "./LanguageContext";
 import ReaderBar from "./ReaderBar";
 import StoryPage from "./StoryPage";
+import VersionStamp from "./VersionStamp";
 
 function Book() {
   const { language, setLanguage } = useLanguage();
@@ -45,7 +46,7 @@ function Book() {
 
   return (
     <div
-      className="book-shell flex h-[100dvh] flex-col overflow-hidden"
+      className="book-shell relative flex h-[100dvh] flex-col overflow-hidden"
       data-theme={theme}
     >
       <div className="sr-only" aria-live="polite" ref={liveRef}>
@@ -147,6 +148,16 @@ function Book() {
         speaking={speaking}
         onToggleSpeech={toggle}
       />
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-40 flex justify-end px-3 pb-[max(0.35rem,env(safe-area-inset-bottom))]">
+        <span className="pointer-events-auto">
+          <VersionStamp
+            className={
+              book.isCover ? "lg:text-paper/30 lg:hover:text-paper/65" : ""
+            }
+          />
+        </span>
+      </div>
     </div>
   );
 }

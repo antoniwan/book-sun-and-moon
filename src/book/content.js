@@ -36,6 +36,7 @@ export const BOOK = {
 
 export const SITE_URL = "https://book-sun-and-moon.vercel.app";
 export const SITE_IMAGE = `${SITE_URL}/cover.jpg`;
+export const REPO_URL = "https://github.com/antoniwan/book-sun-and-moon";
 
 export const SEO = {
   defaultTitle: "Mia, the Sun, and the Moon",
