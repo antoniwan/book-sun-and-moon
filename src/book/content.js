@@ -35,25 +35,25 @@ export const BOOK = {
 };
 
 export const SITE_URL = "https://book-sun-and-moon.vercel.app";
-export const SITE_IMAGE = `${SITE_URL}/share-image.png`;
+export const SITE_IMAGE = `${SITE_URL}/cover.jpg`;
 
 export const SEO = {
-  defaultTitle: "Mia, the Sun, and the Moon | Mia, el Sol y la Luna",
+  defaultTitle: "Mia, the Sun, and the Moon",
   title: {
-    en: "Mia, the Sun, and the Moon | Antonio Rodriguez Martinez",
-    es: "Mia, el Sol y la Luna | Antonio Rodríguez Martínez",
+    en: "Mia, the Sun, and the Moon",
+    es: "Mia, el Sol y la Luna",
   },
   description: {
-    en: "Children's e-book in English and Spanish by Antonio Rodriguez Martinez. Mia, the Sun, and the Moon / Mia, el Sol y la Luna.",
-    es: "Libro infantil en inglés y español de Antonio Rodríguez Martínez. Mia, el Sol y la Luna / Mia, the Sun, and the Moon.",
+    en: "A short children's book in English and Spanish. Mia spends her days with the sun and her nights with the moon.",
+    es: "Un cuentito en inglés y español. Mia pasa sus días con el sol y sus noches con la luna.",
   },
   locale: {
     en: "en_US",
     es: "es_419",
   },
   imageAlt: {
-    en: "Cover illustration for Mia, the Sun, and the Moon",
-    es: "Ilustración de portada de Mia, el Sol y la Luna",
+    en: "A girl in a red coat with braided hair stands in a dark field at dusk, looking toward an orange sun on the horizon while a pale moon hangs in the sky.",
+    es: "Una niña con un abrigo rojo y el cabello trenzado está de pie en un campo oscuro al anochecer, mirando hacia un sol naranja en el horizonte mientras una luna pálida cuelga en el cielo.",
   },
 };
 

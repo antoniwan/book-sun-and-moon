@@ -1,6 +1,6 @@
 # Mia, the Sun, and the Moon
 
-Children's e-book in English and Spanish by Antonio Rodriguez Martinez. Spanish title: Mia, el Sol y la Luna.
+A short children's book in English and Spanish by Antonio Rodriguez Martinez. Spanish title: Mia, el Sol y la Luna.
 
 Published at [https://book-sun-and-moon.vercel.app](https://book-sun-and-moon.vercel.app).
 
