@@ -1,12 +1,2 @@
-- header
-  - click on logo does what? does nothing?
-- footer
-  - page counter
-  - first page
-  - last page
-  - next page
-  - previous page
-- system
-  - localStorage, save state
-  - load page, load state
-  - change page, save state
+- Print stylesheet polish
+- Optional recorded narration instead of browser speech

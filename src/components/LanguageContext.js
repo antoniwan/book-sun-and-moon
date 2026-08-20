@@ -1,24 +1,37 @@
-import React, { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { readSavedLanguage, saveLanguage } from "../book/storage";
 
-const LanguageContext = createContext();
+const LanguageContext = createContext(null);
 
 export function useLanguage() {
-  return useContext(LanguageContext);
+  const value = useContext(LanguageContext);
+  if (!value) {
+    throw new Error("useLanguage must be used within LanguageProvider");
+  }
+  return value;
 }
 
 export function LanguageProvider({ children }) {
-  const getCurrentLanguage = localStorage.getItem("currentLanguage");
-  const [language, setLanguage] = useState(getCurrentLanguage || "en");
+  const [language, setLanguage] = useState(() => readSavedLanguage());
 
-  const switchLanguage = (currentLanguage) => {
-    let nextLanguage = currentLanguage === "en" ? "es" : "en";
-    localStorage.setItem("currentLanguage", nextLanguage);
-    setLanguage(nextLanguage);
-  };
+  useEffect(() => {
+    saveLanguage(language);
+    document.documentElement.lang = language === "es" ? "es" : "en";
+    document.documentElement.dir = "ltr";
+  }, [language]);
+
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      toggleLanguage() {
+        setLanguage((current) => (current === "en" ? "es" : "en"));
+      },
+    }),
+    [language]
+  );
 
   return (
-    <LanguageContext.Provider value={{ language, switchLanguage }}>
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>
   );
 }

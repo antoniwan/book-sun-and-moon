@@ -1,25 +1,22 @@
+import { BOOK } from "../book/content";
 import { useLanguage } from "./LanguageContext";
 
-export default function Header() {
+export default function Header({ onHome, isCover }) {
   const { language } = useLanguage();
 
-  return (
-    <header className="fixed top-0 left-0 right-0 bg-stone-100/25">
-      <h1 className="m-0 p-4 md:px-8 text-xl md:text-4xl drop-shadow-md text-stone-900">
-        {language === "en" && (
-          <>
-            Mia, the Sun <span className="emoji">☀️</span>, and the Moon{" "}
-            <span className="emoji">🌙</span>
-          </>
-        )}
+  if (isCover) return null;
 
-        {language === "es" && (
-          <>
-            Mia, el Sol <span className="emoji">☀️</span>, y la Luna{" "}
-            <span className="emoji">🌙</span>
-          </>
-        )}
-      </h1>
+  return (
+    <header className="pointer-events-none absolute inset-x-0 top-0 z-20 flex items-start justify-between p-3 md:p-5">
+      <button
+        type="button"
+        onClick={onHome}
+        className="pointer-events-auto rounded-full border border-ink/10 bg-cream px-4 py-2 text-left text-ink shadow-md transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-400"
+      >
+        <span className="font-display text-xl leading-none md:text-3xl">
+          {BOOK.shortTitle[language]}
+        </span>
+      </button>
     </header>
   );
 }

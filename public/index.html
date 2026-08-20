@@ -2,39 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Satisfy&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Satisfy&display=swap"
       rel="stylesheet"
     />
-
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ec489a" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#1b1b3a" />
     <meta
       name="description"
-      content="A children's book about the day and night cycle in English and Spanish"
+      content="A story about the sun, the moon, and a curious little girl named Mia. Written with love for Mia and Dario."
     />
-    <meta name="og:image" content="%PUBLIC_URL%/share-image.png" />
+    <meta property="og:title" content="Mia, the Sun, and the Moon" />
+    <meta
+      property="og:description"
+      content="A story by Antonio Rodriguez Martinez, written for his daughter Mia and nephew Dario."
+    />
+    <meta property="og:image" content="%PUBLIC_URL%/share-image.png" />
+    <meta property="og:type" content="book" />
+    <meta name="twitter:card" content="summary_large_image" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-
-    <!-- Google tag (gtag.js) -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-DQYKDJ91XX"
@@ -45,24 +35,15 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-DQYKDJ91XX");
     </script>
-
-    <title>"Mia, the Sun, and the Moon" by Antonio R.</title>
+    <title>Mia, the Sun, and the Moon — by Antonio Rodriguez Martinez</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      Please enable JavaScript to read Mia, the Sun, and the Moon / Por favor
+      habilita JavaScript para leer Mia, el Sol y la Luna.
+    </noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

@@ -1,5 +1,5 @@
 {
-  "short_name": "Mia, the Sun, and the Moon",
+  "short_name": "Mia",
   "name": "Mia, the Sun, and the Moon",
   "icons": [
     {
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ef476f"
+  "theme_color": "#1b1b3a",
+  "background_color": "#fff8f0"
 }

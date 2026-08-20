@@ -1,3 +1,0 @@
-.button {
-  @apply inline-flex justify-between items-center w-36 md:w-44 p-4 bg-pink-500 text-white text-sm font-bold rounded-md hover:bg-blue-600 transition duration-300;
-}
