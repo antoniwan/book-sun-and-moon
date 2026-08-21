@@ -10,7 +10,7 @@ function StoryBlock({ block }) {
 
 export default function StoryPage({ page, language }) {
   return (
-    <article className="caption-card px-5 pb-5 pt-4 text-ink md:px-7 md:pb-7 md:pt-5">
+    <article className="caption-card px-5 pb-5 pt-3 text-ink md:px-7 md:pb-7 md:pt-5 lg:pt-4">
       <div className="font-story text-lg font-medium leading-relaxed md:text-xl lg:text-2xl">
         {page.body[language].map((block, index) => (
           <StoryBlock key={index} block={block} />

@@ -11,22 +11,39 @@ export default function Header({ onHome, isCover }) {
 
   if (isCover) return null;
 
+  const coverLabel = language === "es" ? "Ir a la portada" : "Go to the cover";
+  const coverShort = language === "es" ? "Portada" : "Cover";
+
   return (
-    <header className="shrink-0 px-5 pt-5 md:px-7 md:pt-7">
+    <header className="shrink-0 px-5 pt-3 md:px-7 md:pt-7">
+      {/* Mobile: quiet home control — big “Mia” reads like story text in a short panel */}
       <button
         type="button"
         onClick={onHome}
-        className="group block w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember"
-        aria-label={language === "es" ? "Ir a la portada" : "Go to the cover"}
+        className="group flex items-center gap-2 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember lg:hidden"
+        aria-label={coverLabel}
       >
-        <span className="block font-display text-3xl italic leading-none text-ink transition group-hover:text-ember md:text-4xl">
+        <span className="font-story text-[11px] font-semibold uppercase tracking-[0.2em] text-ink/40 transition group-hover:text-ember">
+          {coverShort}
+        </span>
+        <span className="h-px w-6 bg-ember/70" aria-hidden="true" />
+      </button>
+
+      {/* Desktop side panel: full brand mark */}
+      <button
+        type="button"
+        onClick={onHome}
+        className="group hidden w-full text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ember lg:block"
+        aria-label={coverLabel}
+      >
+        <span className="block font-display text-4xl italic leading-none text-ink transition group-hover:text-ember">
           Mia
         </span>
         <span className="mt-1.5 block font-story text-[11px] font-semibold uppercase tracking-[0.22em] text-ink/45">
           {TITLE_REST[language]}
         </span>
       </button>
-      <div className="mt-4 h-px w-10 bg-ember/80" aria-hidden="true" />
+      <div className="mt-4 hidden h-px w-10 bg-ember/80 lg:block" aria-hidden="true" />
       <span className="sr-only">{BOOK.shortTitle[language]}</span>
     </header>
   );
