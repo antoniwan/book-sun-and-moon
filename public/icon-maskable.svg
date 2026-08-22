@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Mia sun and moon mark">
+  <!-- full-bleed paper for adaptive / maskable safe zone -->
+  <rect width="64" height="64" fill="#f3ead8"/>
+  <g transform="translate(32 32) scale(0.72) translate(-32 -32)">
+    <circle cx="26" cy="32" r="16" fill="#d4923a"/>
+    <circle cx="40" cy="32" r="14" fill="#efe6d6"/>
+    <circle cx="46" cy="32" r="12" fill="#f3ead8"/>
+  </g>
+</svg>

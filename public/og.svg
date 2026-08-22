@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Mia, the Sun, and the Moon">
+  <rect width="1200" height="630" fill="#f3ead8"/>
+  <!-- soft dusk band -->
+  <rect y="520" width="1200" height="110" fill="#1c2740" opacity="0.08"/>
+
+  <!-- brand mark -->
+  <g transform="translate(600 210)">
+    <circle cx="-28" cy="0" r="78" fill="#d4923a"/>
+    <circle cx="42" cy="0" r="68" fill="#efe6d6"/>
+    <circle cx="72" cy="0" r="58" fill="#f3ead8"/>
+  </g>
+
+  <text
+    x="600"
+    y="370"
+    text-anchor="middle"
+    font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+    font-style="italic"
+    font-size="92"
+    fill="#2a221c"
+  >Mia</text>
+
+  <rect x="560" y="400" width="80" height="3" rx="1.5" fill="#c4452f"/>
+
+  <text
+    x="600"
+    y="455"
+    text-anchor="middle"
+    font-family="Georgia, 'Iowan Old Style', 'Times New Roman', serif"
+    font-size="34"
+    letter-spacing="4"
+    fill="#2a221c"
+    opacity="0.72"
+  >the Sun, and the Moon</text>
+</svg>

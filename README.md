@@ -2,7 +2,7 @@
 
 A short children's book in English and Spanish by Antonio Rodriguez Martinez. Spanish title: Mia, el Sol y la Luna.
 
-Published at [https://book-sun-and-moon.vercel.app](https://book-sun-and-moon.vercel.app).
+Published at [https://mia-the-sun-and-the-moon-web-book.stronghandssoftheart.com](https://mia-the-sun-and-the-moon-web-book.stronghandssoftheart.com).
 
 ## Read it
 

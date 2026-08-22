@@ -34,8 +34,14 @@ export const BOOK = {
   portfolioUrl: "https://antonio.builds.software",
 };
 
-export const SITE_URL = "https://book-sun-and-moon.vercel.app";
-export const SITE_IMAGE = `${SITE_URL}/cover.jpg`;
+/** Production origin, no trailing slash. Override with VITE_SITE_URL at build time. */
+export const SITE_URL = String(
+  import.meta.env.VITE_SITE_URL || "https://mia-the-sun-and-the-moon-web-book.stronghandssoftheart.com"
+).replace(/\/$/, "");
+
+export const SITE_CANONICAL = `${SITE_URL}/`;
+export const SITE_IMAGE = `${SITE_URL}/og.png`;
+export const SITE_COVER = `${SITE_URL}/cover.jpg`;
 export const REPO_URL = "https://github.com/antoniwan/book-sun-and-moon";
 
 export const SEO = {
@@ -44,18 +50,23 @@ export const SEO = {
     en: "Mia, the Sun, and the Moon",
     es: "Mia, el Sol y la Luna",
   },
+  applicationName: {
+    en: "Mia, the Sun, and the Moon",
+    es: "Mia, el Sol y la Luna",
+  },
   description: {
-    en: "A short children's book in English and Spanish. Mia spends her days with the sun and her nights with the moon.",
-    es: "Un cuentito en inglés y español. Mia pasa sus días con el sol y sus noches con la luna.",
+    en: "A free picture book about Mia, the sun, and the moon. Read it in English or Spanish.",
+    es: "Un cuento gratis sobre Mia, el sol y la luna. Léelo en inglés o en español.",
   },
   locale: {
     en: "en_US",
     es: "es_419",
   },
   imageAlt: {
-    en: "A girl in a red coat with braided hair stands in a dark field at dusk, looking toward an orange sun on the horizon while a pale moon hangs in the sky.",
-    es: "Una niña con un abrigo rojo y el cabello trenzado está de pie en un campo oscuro al anochecer, mirando hacia un sol naranja en el horizonte mientras una luna pálida cuelga en el cielo.",
+    en: "Warm paper card with a sun and moon mark and the title Mia, the Sun, and the Moon.",
+    es: "Tarjeta de papel cálido con un sol y una luna y el título Mia, el Sol y la Luna.",
   },
+  tags: ["children", "picture book", "sun", "moon", "bilingual"],
 };
 
 export const PAGES = [

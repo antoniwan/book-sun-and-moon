@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://book-sun-and-moon.vercel.app/sitemap.xml
+Sitemap: https://mia-the-sun-and-the-moon-web-book.stronghandssoftheart.com/sitemap.xml
