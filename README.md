@@ -74,6 +74,7 @@ Crawlers: `public/robots.txt`, `public/sitemap.xml`. Meta + JSON-LD live in `ind
 | `src/components/CoverPage.jsx` | Cover, start / continue |
 | `src/components/ReaderBar.jsx` | Footer chrome, language, read-aloud |
 | `src/hooks/` | Navigation, gestures, read-aloud |
+| `LICENSE.md` | MIT (code) and CC BY-NC 4.0 (story and art) |
 | `TODO.md` | Open work |
 
 ## Editorial notes
@@ -81,3 +82,12 @@ Crawlers: `public/robots.txt`, `public/sitemap.xml`. Meta + JSON-LD live in `ind
 Written, designed, and built for Mia and Dario. Dedication copy lives on the cover; keep the reader voice warm, short, and bilingual in both story and chrome.
 
 See `TODO.md` for open work (print stylesheet polish; optional recorded narration instead of browser speech).
+
+## License
+
+Two licenses, on purpose:
+
+- **Source code** (the reader app): [MIT](LICENSE.md)
+- **Book content** (story text, illustrations, and other creative work): [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
+
+Forks and copies of the story are welcome for non-commercial use. Credit [Antonio Rodriguez Martinez](https://antonio.builds.software), name the book, and link back. Commercial use of the story and art stays with the author. Details and the MIT text are in [`LICENSE.md`](LICENSE.md).

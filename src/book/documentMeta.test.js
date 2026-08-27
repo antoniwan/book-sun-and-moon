@@ -37,6 +37,8 @@ test("buildJsonLd includes free Book offer and author Person", () => {
   expect(book.offers.price).toBe("0");
   expect(book.numberOfPages).toBe(10);
   expect(book.image).toContain(SITE_IMAGE);
+  expect(book.license).toBe("https://creativecommons.org/licenses/by-nc/4.0/");
+  expect(book.copyrightYear).toBe(2026);
 });
 
 test("applyDocumentMeta switches Spanish strings", () => {

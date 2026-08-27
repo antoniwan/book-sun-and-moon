@@ -76,6 +76,9 @@ export function buildJsonLd(language) {
         author: { "@id": personId },
         creator: { "@id": personId },
         publisher: { "@id": personId },
+        copyrightHolder: { "@id": personId },
+        copyrightYear: 2026,
+        license: "https://creativecommons.org/licenses/by-nc/4.0/",
         audience: {
           "@type": "Audience",
           audienceType: "Children",
